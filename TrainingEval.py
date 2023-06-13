@@ -7,9 +7,9 @@ from torch.nn import functional as F
 def ParseConfig(configFile, vars):
     file = open(configFile).readlines()
     for line in file:
-        if(line[0] == "#"):
+        if line[0] == "#" or line[0] == "\n":
             continue
-        
+
         key = line.split('=')[0]
         val = line.split('=')[1]
 
@@ -33,37 +33,18 @@ def getMasks(net, iter, device=None):
 
     return segmentationMask
 
-def evaluate_accuracy(net, testIter, lossFunc, classification=True, device=None):
+def evaluate(net, testIter, lossFuncs, device=None):
     net.eval()
+
+    #lossFuncs contains 2 lists of eval functions, first corresponding to segmentation and second corresponding to classification
 
     #Accuracy, loss
     metric = d2l.Accumulator(2)
 
-    with torch.no_grad():
-        for i, (X, y1, y2) in enumerate(testIter):
-            X = X.to(device)
-            y1 = y1.to(device)
-            y2 = y2.to(device)
-
-            yhat = net(X)
-
-            if isinstance(yhat, tuple):
-                yhat = yhat[0]
-
-            if classification:
-                loss, accuracy = lossFunc(yhat, y2)
-            else:
-                loss, accuracy = lossFunc(yhat, y1)
-
-            metric.add(accuracy, loss)
-
-    return metric[0] / len(testIter), metric[1] / len(testIter)
-
-def joint_eval(net, testIter, classLossFunc, segmentLossFunc, device=None):
-    net.eval()
-
-    #Accuracy, loss
-    metric = d2l.Accumulator(4)
+    metric = [
+        [0 for _ in range(len(lossFuncs[0]))],
+        [0 for _ in range(len(lossFuncs[1]))]
+    ]
 
     with torch.no_grad():
         for i, (X, y1, y2) in enumerate(testIter):
@@ -73,14 +54,21 @@ def joint_eval(net, testIter, classLossFunc, segmentLossFunc, device=None):
 
             yhat = net(X)
 
-            classLoss, classAccuracy = classLossFunc(yhat[1], y2)
-            segmentLoss, segmentAccuracy = segmentLossFunc(yhat[0], y1)
+            for i, segmentLoss in enumerate(lossFuncs[0]):
+                metric[0][i] += segmentLoss(yhat[0] if isinstance(yhat, tuple) else yhat, y1)
 
-            metric.add(classAccuracy, classLoss, segmentAccuracy, segmentLoss)
+            for i, classLoss in enumerate(lossFuncs[1]):
+                metric[1][i] += classLoss(yhat[1] if isinstance(yhat, tuple) else yhat, y2)
 
-    return metric[0] / len(testIter), metric[1] / len(testIter), metric[2] / len(testIter), metric[3] / len(testIter)
+    for i in range(len(metric[0])):
+        metric[0][i] /= len(testIter)
 
-def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate, batchSize, device: torch.device, startDim, epochsToDouble, modelFileName, epochsToSave, 
+    for i in range(len(metric[1])):
+        metric[1][i] /= len(testIter)
+
+    return metric
+
+def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate, device: torch.device, startDim, epochsToDouble, modelFileName, epochsToSave, 
           useWandB=False, cosineAnnealing=True, restartEpochs=-1, progressive=False, lossFunc = nn.BCEWithLogitsLoss(), classification=True):
     print(f"Training on {device}")
     
@@ -89,7 +77,7 @@ def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate,
 
     #Setting restartEpochs to a negative will use no warm restarts, otherwise will use warm restarts 
     if cosineAnnealing:
-        if restartEpochs < 0:
+        if restartEpochs <= 0:
             scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=numEpochs)
         else:
             scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, restartEpochs, T_mult=1)
@@ -101,15 +89,14 @@ def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate,
     for epoch in range(startEpoch, numEpochs):
         net.train()
         
-        #Loss, accuracy
-        metric = d2l.Accumulator(2)
+        loss = 0
 
         for i, (X, y1, y2) in enumerate(trainIter):
             optimizer.zero_grad()
             y1 = y1.to(device)
             y2 = y2.to(device)
 
-            if progressive > 0:
+            if progressive != 0:
                 #If using progressive learning, downsamples image to the current dimension
                 X = F.interpolate(X, size=int(currDim))
 
@@ -121,9 +108,9 @@ def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate,
                 yhat = yhat[0]
 
             if classification:
-                l, accuracy = lossFunc(yhat, y2)
+                l = lossFunc(yhat, y2)
             else:
-                l, accuracy = lossFunc(yhat, y1)
+                l = lossFunc(yhat, y1)
 
             #print(f"Loss: {l.item()} Predictions: {yhat.tolist()} Labels: {y.tolist()}")
 
@@ -133,7 +120,7 @@ def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate,
             if cosineAnnealing:
                 scheduler.step(epoch + i / numBatches)
 
-            metric.add(l, accuracy)
+            loss += l
 
         #Progressive learning
         if (epoch + 1) % epochsToDouble == 0 and progressive == 1:
@@ -146,24 +133,32 @@ def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate,
         if (epoch + 1) % epochsToSave == 0:
             torch.save(net.state_dict(), modelFileName + "Epoch" + str(epoch))
 
-        validationAcc, validationLoss = evaluate_accuracy(net, testIter, lossFunc, classification=classification, device=device)
+        if classification:
+            evalLossFunc = [[], [lossFunc]]
+        else:
+            evalLossFunc = [[lossFunc], []]
+
+        validationLoss = evaluate(net, testIter, evalLossFunc, device=device)
+
+        if classification:
+            validationLoss = validationLoss[1][0]
+        else:
+            validationLoss = validationLoss[0][0]
 
         #Overwrites previous best model based on validation accuracy
         if validationLoss < bestValLoss:
             bestValLoss = validationLoss
             torch.save(net.state_dict(), modelFileName + "BestLoss")
 
-        print(f"Epoch {epoch}:\nTrain Acc: {metric[1] / numBatches} Validation Acc: {validationAcc} Train Loss: {metric[0] / numBatches} Validation Loss: {validationLoss}")
+        print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches} Validation Loss: {validationLoss}")
 
         #Externally logs epoch info to WandB
         if useWandB:
-            wandb.log({"Train Acc": metric[1] / numBatches,
-                    "Validation Acc": validationAcc,
-                    "Train Loss": metric[0] / numBatches,
+            wandb.log({"Train Loss": loss / numBatches,
                     "Validation Loss": validationLoss
                     })
             
-def joint_train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate, batchSize, device: torch.device, modelFileName, epochsToSave, 
+def joint_train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate, device: torch.device, modelFileName, epochsToSave, 
           useWandB=False, cosineAnnealing=True, restartEpochs=-1, classLossFunc = None, segmentLossFunc = None, weights = [0.5, 0.5]):
     print(f"Training on {device}")
     
@@ -183,8 +178,7 @@ def joint_train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, lear
     for epoch in range(startEpoch, numEpochs):
         net.train()
         
-        #Loss, accuracy
-        metric = d2l.Accumulator(2)
+        loss = 0
 
         for i, (X, y1, y2) in enumerate(trainIter):
             optimizer.zero_grad()
@@ -194,8 +188,8 @@ def joint_train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, lear
             
             yhat = net(X)
 
-            segmentLoss, segmentAcc = segmentLossFunc(yhat[0], y1)
-            classLoss, classAcc = classLossFunc(yhat[1], y2)
+            segmentLoss = segmentLossFunc(yhat[0], y1)
+            classLoss = classLossFunc(yhat[1], y2)
 
             #print(f"Loss: {l.item()} Predictions: {yhat.tolist()} Labels: {y.tolist()}")
 
@@ -207,25 +201,30 @@ def joint_train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, lear
             if cosineAnnealing:
                 scheduler.step(epoch + i / numBatches)
 
-            metric.add(l, segmentAcc)
+            loss += l
 
         #Checkpoints model
         if (epoch + 1) % epochsToSave == 0:
             torch.save(net.state_dict(), modelFileName + "Epoch" + str(epoch))
 
-        validationAcc, validationLoss = evaluate_accuracy(net, testIter, segmentLossFunc, classification=False, device=device)
+        validationLossFuncs = [
+            [segmentLossFunc],
+            [classLossFunc]
+        ]
+
+        validationLoss = evaluate(net, testIter, validationLossFuncs, device=device)
+
+        validationLoss = (weights[0] * validationLoss[0][0]) + (weights[1] * validationLoss[1][0])
 
         #Overwrites previous best model based on validation accuracy
         if validationLoss < bestValLoss:
             bestValLoss = validationLoss
             torch.save(net.state_dict(), modelFileName + "BestLoss")
 
-        print(f"Epoch {epoch}:\nTrain Acc: {metric[1] / numBatches} Validation Acc: {validationAcc} Train Loss: {metric[0] / numBatches} Validation Loss: {validationLoss}")
+        print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches} Validation Loss: {validationLoss}")
 
         #Externally logs epoch info to WandB
         if useWandB:
-            wandb.log({"Train Acc": metric[1] / numBatches,
-                    "Validation Acc": validationAcc,
-                    "Train Loss": metric[0] / numBatches,
+            wandb.log({"Train Loss": loss / numBatches,
                     "Validation Loss": validationLoss
                     })

@@ -2,7 +2,7 @@ from torch import nn
 from torch.nn import functional as F
 import torch
 
-def double_conv(in_channels, out_channels, dropout):
+def double_conv(in_channels, out_channels):
     return nn.Sequential(
         nn.Conv2d(in_channels, out_channels, 3, padding=1),
         nn.InstanceNorm2d(out_channels),
@@ -10,20 +10,20 @@ def double_conv(in_channels, out_channels, dropout):
         nn.Conv2d(out_channels, out_channels, 3, padding=1),
         nn.InstanceNorm2d(in_channels),
         nn.LeakyReLU(0.2, inplace=True),
-        nn.Dropout(dropout)
+        nn.Dropout(0.25)
     )   
 
 class UNet(nn.Module):
 
-    def __init__(self, dropout, n_class = 1, encoder=None):
+    def __init__(self, n_class = 1, encoder=None):
         super().__init__()
 
         if encoder == None:
-            self.encoder = Encoder(dropout)
+            self.encoder = Encoder(1)
         else:
             self.encoder = encoder
 
-        self.decoder = Decoder(dropout, n_class=n_class)
+        self.decoder = Decoder(1)
         
 
     def forward(self, x):
@@ -39,14 +39,14 @@ class UNet(nn.Module):
 
 class Encoder(nn.Module):
 
-    def __init__(self, dropout):
+    def __init__(self, n_class = 1):
         super().__init__()
                 
-        self.dconv_down1 = double_conv(1, 16, dropout)
-        self.dconv_down2 = double_conv(16, 32, dropout)
-        self.dconv_down3 = double_conv(32, 64, dropout)
-        self.dconv_down4 = double_conv(64, 128, dropout)
-        self.dconv_down5 = double_conv(128, 256, dropout)      
+        self.dconv_down1 = double_conv(1, 16)
+        self.dconv_down2 = double_conv(16, 32)
+        self.dconv_down3 = double_conv(32, 64)
+        self.dconv_down4 = double_conv(64, 128)
+        self.dconv_down5 = double_conv(128, 256)      
         self.avgpool = nn.AdaptiveAvgPool2d((1,1))       
         self.fc = nn.Linear(256, 1) 
         self.sigm = nn.Sigmoid()
@@ -77,18 +77,16 @@ class Encoder(nn.Module):
 
 class Decoder(nn.Module):
 
-    def __init__(self, dropout, n_class = 1):
+    def __init__(self, n_class = 1, nonlocal_mode='concatenation', attention_dsample = (2,2)):
         super().__init__()
 
         self.upsample = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
 
-        self.dconv_up4 = double_conv(256 + 128, 128, dropout)
-        self.dconv_up3 = double_conv(128 + 64, 64, dropout)
-        self.dconv_up2 = double_conv(64 + 32, 32, dropout)
-        self.dconv_up1 = double_conv(32 + 16, 16, dropout)
-        self.conv_last = nn.Conv2d(16, n_class, 1, dropout)
-
-        self.conv_last_saliency = nn.Conv2d(17, n_class, 1)
+        self.dconv_up4 = double_conv(256 + 128, 128)
+        self.dconv_up3 = double_conv(128 + 64, 64)
+        self.dconv_up2 = double_conv(64 + 32, 32)
+        self.dconv_up1 = double_conv(32 + 16, 16)
+        self.conv_last = nn.Conv2d(16, n_class, 1)
 
         self.sigm = nn.Sigmoid()
         
@@ -116,144 +114,3 @@ class Decoder(nn.Module):
         out = self.conv_last(x)
         
         return self.sigm(out)
-    
-"""
-class convBlock(nn.Module):
-    def __init__(self, inChannels, outChannels, strides, dropout) -> None:
-        super().__init__()
-
-        batchNorm = True
-        layerMean = 1.5
-        layerDev = 0.1
-
-        #Uses 2 convolutional layers for each block
-        self.conv1 = nn.Conv2d(inChannels, outChannels, kernel_size=3, padding=1, stride=strides)
-        self.conv2 = nn.Conv2d(outChannels, outChannels, kernel_size=3, padding=1)
-
-        #Initializes convolutional layers using hyperparameters for mean and standard deviation
-        nn.init.normal_(self.conv1.weight, mean=layerMean, std=layerDev)
-        nn.init.normal_(self.conv2.weight, mean=layerMean, std=layerDev)
-
-        #self.dropout = nn.Dropout(dropout).to(device)
-        self.dropout = nn.Dropout(dropout)
-
-        if(batchNorm):
-            self.bn1 = nn.BatchNorm2d(outChannels)
-        else:
-            self.bn1 = False
-
-    def forward(self, X):
-        Y = self.conv1(X)
-        if self.bn1:
-            Y = self.bn1(Y)
-        Y = F.relu(Y)
-
-        Y = self.conv2(Y)
-        if self.bn1:
-            Y = self.bn1(Y)
-        Y = F.relu(Y)
-
-        Y = self.dropout(Y)
-
-        return Y
-    
-class DecoderBlock(nn.Module):
-    def __init__(self, inChannels, outChannels, strides, dropout) -> None:
-        super().__init__()
-
-        self.convTrans = nn.ConvTranspose2d(inChannels, outChannels, 2, stride=2, padding=0)
-        self.conv = convBlock(inChannels, outChannels, strides, dropout)
-
-    def forward(self, X, skipConn):
-        Y = self.convTrans(X)
-        Y = torch.cat((Y, skipConn), dim=1)
-
-        return self.conv(Y)
-    
-class DecoderNetwork(nn.Module):
-        def __init__(self, strides, dropout, device) -> None:
-            super().__init__()
-
-            self.device = device
-            
-            self.block1 = DecoderBlock(256, 128, strides, dropout)
-            self.block2 = DecoderBlock(128, 64, strides, dropout)
-            self.block3 = DecoderBlock(64, 32, strides, dropout)
-            self.block4 = DecoderBlock(32, 16, strides, dropout)
-
-            self.endBlock = nn.Conv2d(16, 1, kernel_size=1, padding=0, stride=1)
-
-            self.sigm = nn.Sigmoid()
-
-        def forward(self, X, skipConn):
-            y = X
-
-            y = self.block1(y, skipConn[-1])
-            y = self.block2(y, skipConn[-2])
-            y = self.block3(y, skipConn[-3])
-            y = self.block4(y, skipConn[-4])
-            y = self.endBlock(y)
-
-            return self.sigm(y)
-        
-class EncoderNetwork(nn.Module):
-    def __init__(self, strides, dropout, device) -> None:
-        super().__init__()
-
-        self.device = device
-
-        #Creates a list of encoder blocks w/ in and out channels specified by parameter
-        self.block1 = convBlock(1, 16, strides, dropout)
-        self.block2 = convBlock(16, 32, strides, dropout)
-        self.block3 = convBlock(32, 64, strides, dropout)
-        self.block4 = convBlock(64, 128, strides, dropout)
-        self.block5 = convBlock(128, 256, strides, dropout)
-
-        self.pool = nn.MaxPool2d(2)
-
-        #Creates classification branch as sequential
-        #Try without using sequential, use each layer separately
-        #Can use without Flatten, average pool does the same thing
-        #Follow MultiMix code
-        self.classification = nn.Sequential(nn.AdaptiveAvgPool2d((1, 1)), nn.Flatten(), nn.Linear(256, 1), nn.Sigmoid()).to(device)
-
-    def forward(self, X):
-        y = X.to(self.device)
-
-        skipConnections = []
-
-        y = self.block1(y)
-        skipConnections.append(y)
-        y = self.pool(y)
-
-        y = self.block2(y)
-        skipConnections.append(y)
-        y = self.pool(y)
-
-        y = self.block3(y)
-        skipConnections.append(y)
-        y = self.pool(y)
-
-        y = self.block4(y)
-        skipConnections.append(y)
-        y = self.pool(y)
-
-        y = self.block5(y)
-
-        return self.classification(y), skipConnections, y
-    
-class SegmentationNetwork(nn.Module):
-    def __init__(self, encoder, decoder, dropout, device) -> None:
-        super().__init__()
-
-        self.device = device
-        self.encoder = encoder
-        self.decoder = decoder
-
-    def forward(self, X):
-        _, skip, y = self.encoder(X)
-
-        y = self.decoder(y, skip)
-
-        return y
-"""
