@@ -3,6 +3,7 @@ import wandb
 from d2l import torch as d2l
 from torch import nn
 from torch.nn import functional as F
+import logging
 
 def ParseConfig(configFile, vars):
     file = open(configFile).readlines()
@@ -33,7 +34,7 @@ def getMasks(net, iter, device=None):
 
     return segmentationMask
 
-def evaluate(net, testIter, lossFuncs, device=None):
+def evaluate(net, testIter, lossFuncs, device=None, encoder=False):
     net.eval()
 
     #lossFuncs contains 2 lists of eval functions, first corresponding to segmentation and second corresponding to classification
@@ -58,7 +59,10 @@ def evaluate(net, testIter, lossFuncs, device=None):
                 metric[0][i] += segmentLoss(yhat[0] if isinstance(yhat, tuple) else yhat, y1)
 
             for i, classLoss in enumerate(lossFuncs[1]):
-                metric[1][i] += classLoss(yhat[1] if isinstance(yhat, tuple) else yhat, y2)
+                if encoder:
+                    metric[1][i] += classLoss(yhat[0], y2)
+                else:
+                    metric[1][i] += classLoss(yhat[1] if isinstance(yhat, tuple) else yhat, y2)
 
     for i in range(len(metric[0])):
         metric[0][i] /= len(testIter)
@@ -68,10 +72,18 @@ def evaluate(net, testIter, lossFuncs, device=None):
 
     return metric
 
-def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate, device: torch.device, startDim, epochsToDouble, modelFileName, epochsToSave, 
-          useWandB=False, cosineAnnealing=True, restartEpochs=-1, progressive=False, lossFunc = nn.BCEWithLogitsLoss(), classification=True):
+def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, startEpoch, learnRate, device: torch.device, startDim, epochsToDouble, modelFileName, epochsToSave, 
+          useWandB=False, cosineAnnealing=True, restartEpochs=-1, progressive=False, encoder=False):
     print(f"Training on {device}")
     
+    if len(weights) != 2 or len(lossFuncs) != 2:
+        logging.error("Length of weights or loss functions list != 2")
+        return
+    
+    if len(weights[0]) != len(lossFuncs[0]) or len(weights[1]) != len(lossFuncs[1]):
+        logging.error("Length of weights and loss functions is not equal")
+        return
+
     net.to(device)
     optimizer = torch.optim.Adam(net.parameters(), lr=learnRate)
 
@@ -104,13 +116,16 @@ def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate,
             
             yhat = net(X)
 
-            if isinstance(yhat, tuple):
-                yhat = yhat[0]
+            segmentYHat = yhat[0] if not encoder else None
+            classYHat = yhat[1] if not encoder else yhat[0]
 
-            if classification:
-                l = lossFunc(yhat, y2)
-            else:
-                l = lossFunc(yhat, y1)
+            l = 0
+
+            for i, func in enumerate(lossFuncs[0]):
+                l += weights[0][i] * func(segmentYHat, y1)
+
+            for i, func in enumerate(lossFuncs[1]):
+                l += weights[1][i] * func(classYHat, y2)
 
             #print(f"Loss: {l.item()} Predictions: {yhat.tolist()} Labels: {y.tolist()}")
 
@@ -133,95 +148,24 @@ def train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate,
         if (epoch + 1) % epochsToSave == 0:
             torch.save(net.state_dict(), modelFileName + "Epoch" + str(epoch))
 
-        if classification:
-            evalLossFunc = [[], [lossFunc]]
-        else:
-            evalLossFunc = [[lossFunc], []]
+        valLosses = evaluate(net, testIter, lossFuncs, device=device, encoder=encoder)
 
-        validationLoss = evaluate(net, testIter, evalLossFunc, device=device)
+        validationLoss = 0
 
-        if classification:
-            validationLoss = validationLoss[1][0]
-        else:
-            validationLoss = validationLoss[0][0]
+        logStr = ""
 
-        #Overwrites previous best model based on validation accuracy
-        if validationLoss < bestValLoss:
-            bestValLoss = validationLoss
-            torch.save(net.state_dict(), modelFileName + "BestLoss")
+        for i, arr in enumerate(valLosses):
+            for j, val in enumerate(arr):
+                validationLoss += weights[i][j] * val
 
-        print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches} Validation Loss: {validationLoss}")
-
-        #Externally logs epoch info to WandB
-        if useWandB:
-            wandb.log({"Train Loss": loss / numBatches,
-                    "Validation Loss": validationLoss
-                    })
-            
-def joint_train(net: nn.Module, trainIter, testIter, numEpochs, startEpoch, learnRate, device: torch.device, modelFileName, epochsToSave, 
-          useWandB=False, cosineAnnealing=True, restartEpochs=-1, classLossFunc = None, segmentLossFunc = None, weights = [0.5, 0.5]):
-    print(f"Training on {device}")
-    
-    net.to(device)
-    optimizer = torch.optim.Adam(net.parameters(), lr=learnRate)
-
-    #Setting restartEpochs to a negative will use no warm restarts, otherwise will use warm restarts 
-    if cosineAnnealing:
-        if restartEpochs < 0:
-            scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=numEpochs)
-        else:
-            scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, restartEpochs, T_mult=1)
-
-    numBatches = len(trainIter)
-    bestValLoss = float('inf')
-
-    for epoch in range(startEpoch, numEpochs):
-        net.train()
-        
-        loss = 0
-
-        for i, (X, y1, y2) in enumerate(trainIter):
-            optimizer.zero_grad()
-            y1 = y1.to(device)
-            y2 = y2.to(device)
-            X = X.to(device)
-            
-            yhat = net(X)
-
-            segmentLoss = segmentLossFunc(yhat[0], y1)
-            classLoss = classLossFunc(yhat[1], y2)
-
-            #print(f"Loss: {l.item()} Predictions: {yhat.tolist()} Labels: {y.tolist()}")
-
-            l = (weights[0] * segmentLoss) + (weights[1] * classLoss)
-
-            l.backward()
-            optimizer.step()
-
-            if cosineAnnealing:
-                scheduler.step(epoch + i / numBatches)
-
-            loss += l
-
-        #Checkpoints model
-        if (epoch + 1) % epochsToSave == 0:
-            torch.save(net.state_dict(), modelFileName + "Epoch" + str(epoch))
-
-        validationLossFuncs = [
-            [segmentLossFunc],
-            [classLossFunc]
-        ]
-
-        validationLoss = evaluate(net, testIter, validationLossFuncs, device=device)
-
-        validationLoss = (weights[0] * validationLoss[0][0]) + (weights[1] * validationLoss[1][0])
+                logStr += (lossFuncs[i][j].__name__ if str(type(lossFuncs[i][j])) == "<class 'function'>" else type(lossFuncs[i][j]).__name__) + ": " + str(val) + " "
 
         #Overwrites previous best model based on validation accuracy
         if validationLoss < bestValLoss:
             bestValLoss = validationLoss
             torch.save(net.state_dict(), modelFileName + "BestLoss")
 
-        print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches} Validation Loss: {validationLoss}")
+        print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches} Validation Loss: {validationLoss} " + logStr)
 
         #Externally logs epoch info to WandB
         if useWandB:

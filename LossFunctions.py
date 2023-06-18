@@ -46,7 +46,7 @@ class FocalLoss(nn.Module):
             else:
                 loss += torch.log(1 - el) * (abs(0 - el) ** self.gamma) * self.weight0
 
-        return -1 * loss / len(input)
+        return (-1 * loss / len(input)).squeeze(0)
     
 def accuracy(input, target):
     predictions = torch.round(input)
