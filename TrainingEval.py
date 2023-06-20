@@ -47,6 +47,11 @@ def evaluate(net, testIter, lossFuncs, device=None, encoder=False):
         [0 for _ in range(len(lossFuncs[1]))]
     ]
 
+    lengths = [
+        [0 for _ in range(len(lossFuncs[0]))],
+        [0 for _ in range(len(lossFuncs[1]))]
+    ]
+
     with torch.no_grad():
         for i, (X, y1, y2) in enumerate(testIter):
             X = X.to(device)
@@ -56,19 +61,24 @@ def evaluate(net, testIter, lossFuncs, device=None, encoder=False):
             yhat = net(X)
 
             for i, segmentLoss in enumerate(lossFuncs[0]):
-                metric[0][i] += segmentLoss(yhat[0] if isinstance(yhat, tuple) else yhat, y1)
+                l = segmentLoss(yhat[0] if isinstance(yhat, tuple) else yhat, y1)
+                
+                if l >= 0:
+                    metric[0][i] += l
+                    lengths[0][i] += 1
 
             for i, classLoss in enumerate(lossFuncs[1]):
-                if encoder:
-                    metric[1][i] += classLoss(yhat[0], y2)
-                else:
-                    metric[1][i] += classLoss(yhat[1] if isinstance(yhat, tuple) else yhat, y2)
+                l = classLoss(yhat[0], y2) if encoder else (classLoss(yhat[1] if isinstance(yhat, tuple) else yhat, y2))
+                
+                if l >= 0:
+                    metric[1][i] += l
+                    lengths[1][i] += 1
 
     for i in range(len(metric[0])):
-        metric[0][i] /= len(testIter)
+        metric[0][i] /= lengths[0][i] if lengths[0][i] > 0 else 1
 
     for i in range(len(metric[1])):
-        metric[1][i] /= len(testIter)
+        metric[1][i] /= lengths[1][i] if lengths[1][i] > 0 else 1
 
     return metric
 
@@ -122,9 +132,15 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
             l = 0
 
             for i, func in enumerate(lossFuncs[0]):
+                if weights[0][i] == 0:
+                    continue
+
                 l += weights[0][i] * func(segmentYHat, y1)
 
             for i, func in enumerate(lossFuncs[1]):
+                if weights[1][i] == 0:
+                    continue
+
                 l += weights[1][i] * func(classYHat, y2)
 
             #print(f"Loss: {l.item()} Predictions: {yhat.tolist()} Labels: {y.tolist()}")

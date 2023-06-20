@@ -96,23 +96,37 @@ def hausdorff(map1, map2):
 
     return maxMinDist
 
-def avgHausdorff(map1, map2):
-    cont1 = measure.find_contours(map1, 0.9)
-    cont2 = measure.find_contours(map2, 0.9)
+def avgHausdorff(tens1, tens2):
+    result = 0
+    numMaps = 0
 
-    totalDist = 0
-    numPts = 0
-    for line1 in cont1:
-        for point1 in line1:
-            numPts += 1
-            minDist = float('inf')
-            for line2 in cont2:
-                for point2 in line2:
-                    minDist = min(minDist, dist(point1, point2))
+    for i in range(tens1.size(dim=0)):
+        map1 = tens1[i].squeeze(0)
+        map2 = tens2[i].squeeze(0)
 
-            totalDist += minDist
+        if torch.count_nonzero(map2) == 0:
+            continue
 
-    return totalDist / numPts
+        cont1 = measure.find_contours(map1.detach().cpu().numpy(), 0.9)
+        cont2 = measure.find_contours(map2.detach().cpu().numpy(), 0.9)
+
+        totalDist = 0
+        numPts = 0
+        for line1 in cont1:
+            for point1 in line1:
+                numPts += 1
+                minDist = float('inf')
+                for line2 in cont2:
+                    for point2 in line2:
+                        minDist = min(minDist, dist(point1, point2))
+
+                totalDist += minDist
+
+        if numPts > 0:
+            numMaps += 1
+            result += totalDist / numPts
+
+    return (result / numMaps) if numMaps > 0 else -1
 
 def dist(p1, p2):
     return math.sqrt(((p2[0] - p1[0]) ** 2) + ((p2[1] - p1[1]) ** 2))
