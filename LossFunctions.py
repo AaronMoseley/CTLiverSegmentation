@@ -2,6 +2,7 @@ import torch
 from torch import nn
 import math
 from skimage import measure
+from sklearn.metrics import f1_score
 
 class BalancedCELoss(nn.Module):
     def __init__(self, weight0=1, weight1=1):
@@ -23,7 +24,7 @@ class BalancedCELoss(nn.Module):
                 loss += torch.log(1 - el) * self.weight0
 
         return -1 * loss / len(input)
-    
+  
 class FocalLoss(nn.Module):
     def __init__(self, weight0=1, weight1=1, gamma=0):
         super().__init__()
@@ -47,7 +48,7 @@ class FocalLoss(nn.Module):
                 loss += torch.log(1 - el) * (abs(0 - el) ** self.gamma) * self.weight0
 
         return (-1 * loss / len(input)).squeeze(0)
-    
+     
 def accuracy(input, target):
     predictions = torch.round(input)
     accuratePreds = 0
@@ -71,7 +72,7 @@ def dice_loss(pred, target, smooth = 1.):
     loss = (1 - ((2. * intersection + smooth) / (pred.sum(dim=2).sum(dim=2) + target.sum(dim=2).sum(dim=2) + smooth)))
 
     return loss.mean()
-
+    
 def dice_score(pred, target, smooth = 1.):
     roundedPreds = torch.round(pred)
 
@@ -130,3 +131,6 @@ def avgHausdorff(tens1, tens2):
 
 def dist(p1, p2):
     return math.sqrt(((p2[0] - p1[0]) ** 2) + ((p2[1] - p1[1]) ** 2))
+
+def f1(pred, target):
+    return f1_score(target.detach().cpu().numpy(), torch.round(pred).detach().cpu().numpy(), zero_division=0)
