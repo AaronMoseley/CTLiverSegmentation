@@ -81,23 +81,7 @@ def dice_score(pred, target, smooth = 1.):
 
     return roundedLoss.mean()
 
-def hausdorff(map1, map2):
-    cont1 = measure.find_contours(map1, 0.9)
-    cont2 = measure.find_contours(map2, 0.9)
-
-    maxMinDist = -1
-    for line1 in cont1:
-        for point1 in line1:
-            minDist = float('inf')
-            for line2 in cont2:
-                for point2 in line2:
-                    minDist = min(minDist, dist(point1, point2))
-
-            maxMinDist = max(maxMinDist, minDist)
-
-    return maxMinDist
-
-def avgHausdorff(tens1, tens2):
+def hausdorff(tens1, tens2):
     result = 0
     numMaps = 0
 
@@ -111,7 +95,7 @@ def avgHausdorff(tens1, tens2):
         cont1 = measure.find_contours(map1.detach().cpu().numpy(), 0.9)
         cont2 = measure.find_contours(map2.detach().cpu().numpy(), 0.9)
 
-        totalDist = 0
+        result = 0
         numPts = 0
         for line1 in cont1:
             for point1 in line1:
@@ -121,13 +105,12 @@ def avgHausdorff(tens1, tens2):
                     for point2 in line2:
                         minDist = min(minDist, dist(point1, point2))
 
-                totalDist += minDist
+                result = max(result, minDist)
 
         if numPts > 0:
             numMaps += 1
-            result += totalDist / numPts
 
-    return (result / numMaps) if numMaps > 0 else -1
+    return result if numMaps > 0 else -1
 
 def dist(p1, p2):
     return math.sqrt(((p2[0] - p1[0]) ** 2) + ((p2[1] - p1[1]) ** 2))
