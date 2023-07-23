@@ -116,4 +116,7 @@ def dist(p1, p2):
     return math.sqrt(((p2[0] - p1[0]) ** 2) + ((p2[1] - p1[1]) ** 2))
 
 def f1(pred, target):
-    return f1_score(target.detach().cpu().numpy(), torch.round(pred).detach().cpu().numpy(), zero_division=0)
+    try:
+        return f1_score(target.detach().cpu().numpy(), torch.round(pred).squeeze(1).detach().cpu().numpy(), zero_division=0)
+    except:
+        return 0
