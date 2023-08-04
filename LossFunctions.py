@@ -63,7 +63,7 @@ def accuracy(input, target):
     return accuratePreds / input.size()[0]
 
 def dice_loss(pred, target, smooth = 1.):
-    target = torch.clamp(target, min=0, max=1)
+    #target = torch.clamp(target, min=0, max=1)
 
     pred = pred.contiguous()
     target = target.contiguous()    

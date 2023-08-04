@@ -25,7 +25,7 @@ class LITSBinaryDataset(Dataset):
         #Returns list containing slice data and image label
         #Does not currently return segmentation data, will need to implement for decoder
         result.append(torch.Tensor(data[...]).unsqueeze(0))
-        result.append(torch.Tensor(segmentation[...]).unsqueeze(0))
+        result.append(torch.clamp(torch.Tensor(segmentation[...]).unsqueeze(0), min=0, max=1))
         result.append(torch.Tensor(label).squeeze(0))
 
         return result
