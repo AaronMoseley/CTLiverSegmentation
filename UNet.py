@@ -15,7 +15,7 @@ def double_conv(in_channels, out_channels):
 
 class UNet(nn.Module):
 
-    def __init__(self, n_class = 1, encoder=None):
+    def __init__(self, device, n_class = 1, encoder=None, multiTask=False):
         super().__init__()
 
         if encoder == None:
@@ -24,13 +24,45 @@ class UNet(nn.Module):
             self.encoder = encoder
 
         self.decoder = Decoder(1)
+        self.multiTask = multiTask
+
+        self.device = device
         
 
     def forward(self, x):
         outC, conv5, conv4, conv3, conv2, conv1 = self.encoder(x)
+
         outSeg = self.decoder(x, conv5, conv4, conv3, conv2, conv1)
 
-        # return outSeg, outC, saliency
+        finalSeg = None
+        finalC = None
+
+        if self.multiTask:
+            for i, classLabel in enumerate(outC):
+                if classLabel < 0.5:
+                    result = (outSeg[i] * 0).unsqueeze(dim=0)
+                else:
+                    result = outSeg[i].unsqueeze(dim=0)
+
+                if finalSeg == None:
+                    finalSeg = result
+                else:
+                    finalSeg = torch.cat((finalSeg, result), dim=0)
+
+            for i, segMap in enumerate(outSeg):
+                if torch.count_nonzero(torch.round(segMap)) == 0:
+                    result = outC[i]
+                else:
+                    result = outC[i]
+
+                if finalC == None:
+                    finalC = result
+                else:
+                    finalC = torch.cat((finalC, result), dim=0)
+
+            return finalSeg, finalC
+
+        # return outSeg, outC
         return outSeg, outC
 
     def freezeEncoder(self):

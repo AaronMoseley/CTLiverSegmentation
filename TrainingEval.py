@@ -30,7 +30,8 @@ def getMasks(net, iter, device=None):
 
             segment, _ = net(X)
 
-            segmentationMask.append(torch.round(segment).squeeze(0).squeeze(0).tolist())
+            for slice in segment:
+                segmentationMask.append(torch.round(slice).squeeze(0).tolist())
 
     return segmentationMask
 
