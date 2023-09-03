@@ -108,6 +108,9 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
     numBatches = len(trainIter)
     bestValLoss = float('inf')
 
+    classPerf = 0
+    segmentPerf = 0
+
     currDim = startDim
     for epoch in range(startEpoch, numEpochs):
         net.train()
@@ -125,7 +128,7 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
 
             X = X.to(device)
             
-            yhat = net(X)
+            yhat = net(X, classPerf >= net.classThreshold, segmentPerf >= net.segmentThreshold)
 
             segmentYHat = yhat[0] if not encoder else None
             classYHat = yhat[1] if not encoder else yhat[0]
@@ -133,16 +136,12 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
             l = 0
 
             for i, func in enumerate(lossFuncs[0]):
-                if weights[0][i] == 0:
-                    continue
-
-                l += weights[0][i] * func(segmentYHat, y1)
+                if weights[0][i] > 0:
+                    l += weights[0][i] * func(segmentYHat, y1)
 
             for i, func in enumerate(lossFuncs[1]):
-                if weights[1][i] == 0:
-                    continue
-
-                l += weights[1][i] * func(classYHat, y2)
+                if weights[1][i] > 0:
+                    l += weights[1][i] * func(classYHat, y2)
 
             #print(f"Loss: {l.item()} Predictions: {yhat.tolist()} Labels: {y.tolist()}")
 
@@ -170,6 +169,9 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
         validationLoss = 0
 
         logStr = ""
+
+        segmentPerf = valLosses[0][0]
+        classPerf = valLosses[1][0]
 
         for i, arr in enumerate(valLosses):
             for j, val in enumerate(arr):

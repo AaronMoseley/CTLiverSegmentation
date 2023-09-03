@@ -15,7 +15,7 @@ def double_conv(in_channels, out_channels):
 
 class UNet(nn.Module):
 
-    def __init__(self, device, n_class = 1, encoder=None, multiTask=False):
+    def __init__(self, device, n_class = 1, encoder=None, multiTask=False, classThreshold=0, segmentThreshold=0):
         super().__init__()
 
         if encoder == None:
@@ -26,10 +26,13 @@ class UNet(nn.Module):
         self.decoder = Decoder(1)
         self.multiTask = multiTask
 
+        self.classThreshold = classThreshold
+        self.segmentThreshold = segmentThreshold
+
         self.device = device
         
 
-    def forward(self, x):
+    def forward(self, x, classThresholdReached=True, segmentThresholdReached=True):
         outC, conv5, conv4, conv3, conv2, conv1 = self.encoder(x)
 
         outSeg = self.decoder(x, conv5, conv4, conv3, conv2, conv1)
@@ -38,27 +41,33 @@ class UNet(nn.Module):
         finalC = None
 
         if self.multiTask:
-            for i, classLabel in enumerate(outC):
-                if classLabel < 0.5:
-                    result = (outSeg[i] * 0).unsqueeze(dim=0)
-                else:
-                    result = outSeg[i].unsqueeze(dim=0)
+            if classThresholdReached:
+                for i, classLabel in enumerate(outC):
+                    if classLabel < 0.5:
+                        result = (outSeg[i] * 0).unsqueeze(dim=0)
+                    else:
+                        result = outSeg[i].unsqueeze(dim=0)
 
-                if finalSeg == None:
-                    finalSeg = result
-                else:
-                    finalSeg = torch.cat((finalSeg, result), dim=0)
+                    if finalSeg == None:
+                        finalSeg = result
+                    else:
+                        finalSeg = torch.cat((finalSeg, result), dim=0)
+            else:
+                finalSeg = outSeg
 
-            for i, segMap in enumerate(outSeg):
-                if torch.count_nonzero(torch.round(segMap)) == 0:
-                    result = outC[i]
-                else:
-                    result = outC[i]
+            if segmentThresholdReached:
+                for i, segMap in enumerate(outSeg):
+                    if torch.count_nonzero(torch.round(segMap)) == 0:
+                        result = outC[i]
+                    else:
+                        result = outC[i]
 
-                if finalC == None:
-                    finalC = result
-                else:
-                    finalC = torch.cat((finalC, result), dim=0)
+                    if finalC == None:
+                        finalC = result
+                    else:
+                        finalC = torch.cat((finalC, result), dim=0)
+            else:
+                finalC = outC
 
             return finalSeg, finalC
 
