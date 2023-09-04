@@ -3,6 +3,7 @@ from torch import nn
 import math
 from skimage import measure
 from sklearn.metrics import f1_score
+from torch.nn import functional as F
 
 class BalancedCELoss(nn.Module):
     def __init__(self, weight0=1, weight1=1):
@@ -64,6 +65,10 @@ def accuracy(input, target):
 
 def dice_loss(pred, target, smooth = 1.):
     #target = torch.clamp(target, min=0, max=1)
+    dim = pred.size()[2]
+    
+    if dim != target.size()[2]:
+        target = F.interpolate(target, size=int(dim))
 
     pred = pred.contiguous()
     target = target.contiguous()    

@@ -170,8 +170,9 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
 
         logStr = ""
 
-        segmentPerf = valLosses[0][0]
-        classPerf = valLosses[1][0]
+        if net.multiTask:
+            segmentPerf = valLosses[0][0]
+            classPerf = valLosses[1][0]
 
         for i, arr in enumerate(valLosses):
             for j, val in enumerate(arr):
