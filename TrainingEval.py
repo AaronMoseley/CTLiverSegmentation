@@ -1,6 +1,5 @@
 import torch
 import wandb
-from d2l import torch as d2l
 from torch import nn
 from torch.nn import functional as F
 import logging
@@ -39,9 +38,6 @@ def evaluate(net, testIter, lossFuncs, device=None, encoder=False):
     net.eval()
 
     #lossFuncs contains 2 lists of eval functions, first corresponding to segmentation and second corresponding to classification
-
-    #Accuracy, loss
-    metric = d2l.Accumulator(2)
 
     metric = [
         [0 for _ in range(len(lossFuncs[0]))],
@@ -186,6 +182,93 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
             torch.save(net.state_dict(), modelFileName + "BestLoss")
 
         print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches} Validation Loss: {validationLoss} " + logStr)
+
+        #Externally logs epoch info to WandB
+        if useWandB:
+            wandb.log({"Train Loss": loss / numBatches,
+                    "Validation Loss": validationLoss
+                    })
+            
+def contrastiveEval(net, testIter, distFunc, device=None):
+    net.eval()
+
+    #lossFuncs contains 2 lists of eval functions, first corresponding to segmentation and second corresponding to classification
+
+    metric = 0
+    length = len(testIter)
+
+    with torch.no_grad():
+        for i, (main, pos, neg) in enumerate(testIter):
+            main = main.to(device)
+            pos = pos.to(device)
+            neg = neg.to(device)
+
+            _, mainRep, _, _, _, _ = net(main)
+            _, negRep, _, _, _, _ = net(neg)
+            _, posRep, _, _, _, _ = net(pos)
+
+            posDist, negDist = distFunc(mainRep, posRep, negRep)
+            l = posDist + (1 - negDist)
+            metric += l
+            length += 1
+
+    return metric / length
+
+def contrastiveTrain(net: nn.Module, distFunc, trainIter, testIter, numEpochs, startEpoch, learnRate, device: torch.device, modelFileName, epochsToSave, useWandB=False, cosineAnnealing=True, restartEpochs=-1):
+    print(f"Training on {device}")
+
+    net.to(device)
+    optimizer = torch.optim.Adam(net.parameters(), lr=learnRate)
+
+    #Setting restartEpochs to a negative will use no warm restarts, otherwise will use warm restarts 
+    if cosineAnnealing:
+        if restartEpochs <= 0:
+            scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=numEpochs)
+        else:
+            scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, restartEpochs, T_mult=1)
+
+    numBatches = len(trainIter)
+    bestValLoss = float('inf')
+
+    for epoch in range(startEpoch, numEpochs):
+        net.train()
+        
+        loss = 0
+
+        for i, (main, pos, neg) in enumerate(trainIter):
+            optimizer.zero_grad()
+            
+            main = main.to(device)
+            pos = pos.to(device)
+            neg = neg.to(device)
+            
+            _, mainRep, _, _, _, _ = net(main)
+            _, negRep, _, _, _, _ = net(neg)
+            _, posRep, _, _, _, _ = net(pos)
+
+            posDist, negDist = distFunc(mainRep, posRep, negRep)
+            l = posDist + (1 - negDist)
+
+            l.backward()
+            optimizer.step()
+
+            if cosineAnnealing:
+                scheduler.step(epoch + i / numBatches)
+
+            loss += l
+
+        #Checkpoints model
+        if (epoch + 1) % epochsToSave == 0:
+            torch.save(net.state_dict(), modelFileName + "Epoch" + str(epoch))
+
+        validationLoss = contrastiveEval()
+
+        #Overwrites previous best model based on validation accuracy
+        if validationLoss < bestValLoss:
+            bestValLoss = validationLoss
+            torch.save(net.state_dict(), modelFileName + "BestLoss")
+
+        print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches} Validation Loss: {validationLoss}")
 
         #Externally logs epoch info to WandB
         if useWandB:

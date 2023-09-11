@@ -34,3 +34,23 @@ class LITSBinaryDataset(Dataset):
         #Closes file once dataset is no longer being used
         #Do not use class instance after this function is called
         self.file.close()
+
+class LITSContDataset(Dataset):
+    def __init__(self, fileName):
+        super().__init__()
+
+        self.file = h5py.File(fileName, 'r')
+        self.length = len(list(self.file.keys()))
+
+    def __len__(self):
+        return self.length
+    
+    def __getitem__(self, idx):
+        result = []
+        result.append(self.file["Slice" + str(idx)]["Main"])
+        result.append(self.file["Slice" + str(idx)]["Positive"])
+        result.append(self.file["Slice" + str(idx)]["Negative"])
+        return result
+    
+    def closeFile(self):
+        self.file.close()

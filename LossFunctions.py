@@ -50,6 +50,19 @@ class FocalLoss(nn.Module):
 
         return (-1 * loss / len(input)).squeeze(0)
      
+def ContrastiveLossEuclidean(pred, positive, negative):
+    posDist = (positive - pred).pow(2)
+    while len(posDist.size()) > 1:
+        posDist = posDist.sum(-1)
+    posDist = torch.sigmoid(posDist.sqrt())
+
+    negDist = (negative - pred).pow(2)
+    while len(negDist.size()) > 1:
+        negDist = negDist.sum(-1)
+    negDist = torch.sigmoid(negDist.sqrt())
+
+    return posDist, negDist
+
 def accuracy(input, target):
     predictions = torch.round(input)
     accuratePreds = 0
