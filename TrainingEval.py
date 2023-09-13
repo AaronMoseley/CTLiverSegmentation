@@ -209,6 +209,7 @@ def contrastiveEval(net, testIter, distFunc, device=None):
 
             posDist, negDist = distFunc(mainRep, posRep, negRep)
             l = posDist + (1 - negDist)
+            l = torch.mean(l)
             metric += l
             length += 1
 
@@ -248,6 +249,7 @@ def contrastiveTrain(net: nn.Module, distFunc, trainIter, testIter, numEpochs, s
 
             posDist, negDist = distFunc(mainRep, posRep, negRep)
             l = posDist + (1 - negDist)
+            l = torch.mean(l)
 
             l.backward()
             optimizer.step()
@@ -261,7 +263,7 @@ def contrastiveTrain(net: nn.Module, distFunc, trainIter, testIter, numEpochs, s
         if (epoch + 1) % epochsToSave == 0:
             torch.save(net.state_dict(), modelFileName + "Epoch" + str(epoch))
 
-        validationLoss = contrastiveEval()
+        validationLoss = contrastiveEval(net, testIter, distFunc, device=device)
 
         #Overwrites previous best model based on validation accuracy
         if validationLoss < bestValLoss:

@@ -47,9 +47,9 @@ class LITSContDataset(Dataset):
     
     def __getitem__(self, idx):
         result = []
-        result.append(self.file["Slice" + str(idx)]["Main"])
-        result.append(self.file["Slice" + str(idx)]["Positive"])
-        result.append(self.file["Slice" + str(idx)]["Negative"])
+        result.append(torch.Tensor(self.file["Slice" + str(idx)]["MainSlice"][...]).unsqueeze(0))
+        result.append(torch.Tensor(self.file["Slice" + str(idx)]["PositiveSlice"][...]).unsqueeze(0))
+        result.append(torch.Tensor(self.file["Slice" + str(idx)]["NegativeSlice"][...]).unsqueeze(0))
         return result
     
     def closeFile(self):
