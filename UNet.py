@@ -115,6 +115,43 @@ class Encoder(nn.Module):
         outC = self.fc(avgpool)
         
         return self.sigm(outC), conv5, conv4, conv3, conv2, conv1
+    
+class ContrastiveEncoder(nn.Module):
+
+    def __init__(self, n_class = 1):
+        super().__init__()
+                
+        self.dconv_down1 = double_conv(1, 16)
+        self.dconv_down2 = double_conv(16, 32)
+        self.dconv_down3 = double_conv(32, 64)
+        self.dconv_down4 = double_conv(64, 128)
+        self.dconv_down5 = double_conv(128, 256)
+        self.maxpool = nn.MaxPool2d(2)
+
+        self.avgPool = nn.AdaptiveAvgPool2d((1,1))
+        self.projHead = nn.Sequential(nn.Linear(256, 256), nn.Linear(256, 256))
+
+    def forward(self, x):
+        conv1 = self.dconv_down1(x)
+        x = self.maxpool(conv1)
+
+        conv2 = self.dconv_down2(x)
+        x = self.maxpool(conv2)
+        
+        conv3 = self.dconv_down3(x)
+        x = self.maxpool(conv3)   
+
+        conv4 = self.dconv_down4(x)
+        x = self.maxpool(conv4)
+
+        conv5 = self.dconv_down5(x)
+        x1 = self.maxpool(conv5)
+        
+        projection = self.avgPool(x1)
+        projection = projection.view(projection.size(0), -1)
+        projection = self.projHead(projection)
+        
+        return projection, conv5, conv4, conv3, conv2, conv1
 
 class Decoder(nn.Module):
 
