@@ -50,15 +50,21 @@ class FocalLoss(nn.Module):
 
         return (-1 * loss / len(input)).squeeze(0)
      
-def ContrastiveLossCosine(pred, positive, negative, temp=0.5):
-    cos = nn.CosineSimilarity(dim=1)
-    cosPos = torch.exp(cos(pred, positive) / temp)
-    cosNeg = torch.exp(cos(pred, negative) / temp)
+class ContrastiveLossCosine(nn.Module):
+    def __init__(self, temp):
+        super().__init__()
+        
+        self.temp = temp
 
-    result = cosPos / (cosPos + cosNeg)
-    result = -1 * torch.log(result)
+    def forward(self, pred, positive, negative):
+        cos = nn.CosineSimilarity(dim=1)
+        cosPos = torch.exp(cos(pred, positive) / self.temp)
+        cosNeg = torch.exp(cos(pred, negative) / self.temp)
 
-    return result
+        result = cosPos / (cosPos + cosNeg)
+        result = -1 * torch.log(result)
+
+        return result
 
 def ContrastiveLossEuclidean(pred, positive, negative):
     posDist = (positive - pred).pow(2)

@@ -74,9 +74,9 @@ class UNet(nn.Module):
         # return outSeg, outC
         return outSeg, outC
 
-    def freezeEncoder(self):
+    def freezeEncoder(self, state=False):
         for param in self.encoder.parameters():
-            param.requires_grad = False
+            param.requires_grad = state
 
 class Encoder(nn.Module):
 
@@ -129,7 +129,7 @@ class ContrastiveEncoder(nn.Module):
         self.maxpool = nn.MaxPool2d(2)
 
         self.avgPool = nn.AdaptiveAvgPool2d((1,1))
-        self.projHead = nn.Sequential(nn.Linear(256, 256), nn.Linear(256, 256))
+        self.projHead = nn.Linear(256, 256)
 
     def forward(self, x):
         conv1 = self.dconv_down1(x)

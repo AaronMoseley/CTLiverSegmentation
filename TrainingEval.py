@@ -80,7 +80,7 @@ def evaluate(net, testIter, lossFuncs, device=None, encoder=False):
     return metric
 
 def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, startEpoch, learnRate, device: torch.device, startDim, epochsToDouble, modelFileName, epochsToSave, 
-          useWandB=False, cosineAnnealing=True, restartEpochs=-1, progressive=False, encoder=False):
+          useWandB=False, cosineAnnealing=True, restartEpochs=-1, progressive=False, encoder=False, unfreezeEpoch=-1):
     print(f"Training on {device}")
     
     if len(weights) != 2 or len(lossFuncs) != 2:
@@ -112,6 +112,9 @@ def train(net: nn.Module, lossFuncs, weights, trainIter, testIter, numEpochs, st
         net.train()
         
         loss = 0
+
+        if epoch == unfreezeEpoch:
+            net.freezeEncoder(state=True)
 
         for i, (X, y1, y2) in enumerate(trainIter):
             optimizer.zero_grad()
