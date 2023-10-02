@@ -13,17 +13,58 @@ def double_conv(in_channels, out_channels):
         nn.Dropout(0.25)
     )   
 
+class ResidualBlock(nn.Module):
+    def __init__(self, in_channels, out_channels):
+        super().__init__()
+
+        self.conv1 = nn.Conv2d(in_channels, out_channels, 3, padding=1)
+        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.relu = nn.LeakyReLU(0.2, inplace=True)
+        self.conv2 = nn.Conv2d(out_channels, out_channels, 3, padding=1)
+        self.bn2 = nn.BatchNorm2d(out_channels)
+
+        self.downsample = nn.Conv2d(in_channels, out_channels, 1)
+
+    def forward(self, X):
+        result = self.conv1(X)
+        result = self.bn1(result)
+        result = self.relu(result)
+
+        result = self.conv2(result)
+        result = self.bn2(result)
+
+        xSkip = self.downsample(X)
+        result += xSkip
+
+        return self.relu(result)
+
+"""
+class ResNetBlock(nn.Module):
+    def __init__(self, in_channels, out_channels) -> None:
+        super().__init__()
+
+        self.block1 = ResidualBlock(in_channels, out_channels)
+        self.block2 = ResidualBlock(out_channels, out_channels)
+
+    def forward(self, X):
+        return self.bloc2(self.block1(X))
+"""
+
+def ResNetBlock(in_channels, out_channels):
+    return nn.Sequential(ResidualBlock(in_channels, out_channels),
+                         ResidualBlock(out_channels, out_channels))
+
 class UNet(nn.Module):
 
-    def __init__(self, device, n_class = 1, encoder=None, multiTask=False, classThreshold=0, segmentThreshold=0):
+    def __init__(self, device, n_class = 1, encoder=None, multiTask=False, classThreshold=0, segmentThreshold=0, block=double_conv):
         super().__init__()
 
         if encoder == None:
-            self.encoder = Encoder(1)
+            self.encoder = Encoder(1, block=block)
         else:
             self.encoder = encoder
 
-        self.decoder = Decoder(1)
+        self.decoder = Decoder(1, block=block)
         self.multiTask = multiTask
 
         self.classThreshold = classThreshold
@@ -80,14 +121,19 @@ class UNet(nn.Module):
 
 class Encoder(nn.Module):
 
-    def __init__(self, n_class = 1):
+    def __init__(self, n_class = 1, block=double_conv):
         super().__init__()
                 
-        self.dconv_down1 = double_conv(1, 16)
-        self.dconv_down2 = double_conv(16, 32)
-        self.dconv_down3 = double_conv(32, 64)
-        self.dconv_down4 = double_conv(64, 128)
-        self.dconv_down5 = double_conv(128, 256)      
+        #self.dconv_down1 = double_conv(1, 16)
+        #self.dconv_down2 = double_conv(16, 32)
+        #self.dconv_down3 = double_conv(32, 64)
+        #self.dconv_down4 = double_conv(64, 128)
+        #self.dconv_down5 = double_conv(128, 256)      
+        self.dconv_down1 = block(1, 16)
+        self.dconv_down2 = block(16, 32)
+        self.dconv_down3 = block(32, 64)
+        self.dconv_down4 = block(64, 128)
+        self.dconv_down5 = block(128, 256)     
         self.avgpool = nn.AdaptiveAvgPool2d((1,1))       
         self.fc = nn.Linear(256, 1) 
         self.sigm = nn.Sigmoid()
@@ -118,14 +164,19 @@ class Encoder(nn.Module):
     
 class ContrastiveEncoder(nn.Module):
 
-    def __init__(self, n_class = 1):
+    def __init__(self, n_class = 1, block=double_conv):
         super().__init__()
                 
-        self.dconv_down1 = double_conv(1, 16)
-        self.dconv_down2 = double_conv(16, 32)
-        self.dconv_down3 = double_conv(32, 64)
-        self.dconv_down4 = double_conv(64, 128)
-        self.dconv_down5 = double_conv(128, 256)
+        #self.dconv_down1 = double_conv(1, 16)
+        #self.dconv_down2 = double_conv(16, 32)
+        #self.dconv_down3 = double_conv(32, 64)
+        #self.dconv_down4 = double_conv(64, 128)
+        #self.dconv_down5 = double_conv(128, 256)
+        self.dconv_down1 = block(1, 16)
+        self.dconv_down2 = block(16, 32)
+        self.dconv_down3 = block(32, 64)
+        self.dconv_down4 = block(64, 128)
+        self.dconv_down5 = block(128, 256)
         self.maxpool = nn.MaxPool2d(2)
 
         self.avgPool = nn.AdaptiveAvgPool2d((1,1))
@@ -155,15 +206,19 @@ class ContrastiveEncoder(nn.Module):
 
 class Decoder(nn.Module):
 
-    def __init__(self, n_class = 1, nonlocal_mode='concatenation', attention_dsample = (2,2)):
+    def __init__(self, n_class = 1, nonlocal_mode='concatenation', attention_dsample = (2,2), block=double_conv):
         super().__init__()
 
         self.upsample = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
 
-        self.dconv_up4 = double_conv(256 + 128, 128)
-        self.dconv_up3 = double_conv(128 + 64, 64)
-        self.dconv_up2 = double_conv(64 + 32, 32)
-        self.dconv_up1 = double_conv(32 + 16, 16)
+        #self.dconv_up4 = double_conv(256 + 128, 128)
+        #self.dconv_up3 = double_conv(128 + 64, 64)
+        #self.dconv_up2 = double_conv(64 + 32, 32)
+        #self.dconv_up1 = double_conv(32 + 16, 16)
+        self.dconv_up4 = block(256 + 128, 128)
+        self.dconv_up3 = block(128 + 64, 64)
+        self.dconv_up2 = block(64 + 32, 32)
+        self.dconv_up1 = block(32 + 16, 16)
         self.conv_last = nn.Conv2d(16, n_class, 1)
 
         self.sigm = nn.Sigmoid()
