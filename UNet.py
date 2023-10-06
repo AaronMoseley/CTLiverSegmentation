@@ -18,37 +18,25 @@ class ResidualBlock(nn.Module):
         super().__init__()
 
         self.conv1 = nn.Conv2d(in_channels, out_channels, 3, padding=1)
-        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.instNorm = nn.InstanceNorm2d(out_channels)
         self.relu = nn.LeakyReLU(0.2, inplace=True)
         self.conv2 = nn.Conv2d(out_channels, out_channels, 3, padding=1)
-        self.bn2 = nn.BatchNorm2d(out_channels)
+        self.dropout = nn.Dropout(0.25)
 
         self.downsample = nn.Conv2d(in_channels, out_channels, 1)
 
     def forward(self, X):
         result = self.conv1(X)
-        result = self.bn1(result)
+        result = self.instNorm(result)
         result = self.relu(result)
 
         result = self.conv2(result)
-        result = self.bn2(result)
+        result = self.instNorm(result)
 
         xSkip = self.downsample(X)
         result += xSkip
 
-        return self.relu(result)
-
-"""
-class ResNetBlock(nn.Module):
-    def __init__(self, in_channels, out_channels) -> None:
-        super().__init__()
-
-        self.block1 = ResidualBlock(in_channels, out_channels)
-        self.block2 = ResidualBlock(out_channels, out_channels)
-
-    def forward(self, X):
-        return self.bloc2(self.block1(X))
-"""
+        return self.dropout(self.relu(result))
 
 def ResNetBlock(in_channels, out_channels):
     return nn.Sequential(ResidualBlock(in_channels, out_channels),
@@ -123,12 +111,7 @@ class Encoder(nn.Module):
 
     def __init__(self, n_class = 1, block=double_conv):
         super().__init__()
-                
-        #self.dconv_down1 = double_conv(1, 16)
-        #self.dconv_down2 = double_conv(16, 32)
-        #self.dconv_down3 = double_conv(32, 64)
-        #self.dconv_down4 = double_conv(64, 128)
-        #self.dconv_down5 = double_conv(128, 256)      
+    
         self.dconv_down1 = block(1, 16)
         self.dconv_down2 = block(16, 32)
         self.dconv_down3 = block(32, 64)
@@ -166,12 +149,7 @@ class ContrastiveEncoder(nn.Module):
 
     def __init__(self, n_class = 1, block=double_conv):
         super().__init__()
-                
-        #self.dconv_down1 = double_conv(1, 16)
-        #self.dconv_down2 = double_conv(16, 32)
-        #self.dconv_down3 = double_conv(32, 64)
-        #self.dconv_down4 = double_conv(64, 128)
-        #self.dconv_down5 = double_conv(128, 256)
+    
         self.dconv_down1 = block(1, 16)
         self.dconv_down2 = block(16, 32)
         self.dconv_down3 = block(32, 64)
@@ -211,10 +189,6 @@ class Decoder(nn.Module):
 
         self.upsample = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
 
-        #self.dconv_up4 = double_conv(256 + 128, 128)
-        #self.dconv_up3 = double_conv(128 + 64, 64)
-        #self.dconv_up2 = double_conv(64 + 32, 32)
-        #self.dconv_up1 = double_conv(32 + 16, 16)
         self.dconv_up4 = block(256 + 128, 128)
         self.dconv_up3 = block(128 + 64, 64)
         self.dconv_up2 = block(64 + 32, 32)
