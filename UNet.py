@@ -48,11 +48,11 @@ class UNet(nn.Module):
         super().__init__()
 
         if encoder == None:
-            self.encoder = Encoder(1, block=block)
+            self.encoder = Encoder(n_class=n_class, block=block)
         else:
             self.encoder = encoder
 
-        self.decoder = Decoder(1, block=block)
+        self.decoder = Decoder(n_class=n_class, block=block)
         self.multiTask = multiTask
 
         self.classThreshold = classThreshold

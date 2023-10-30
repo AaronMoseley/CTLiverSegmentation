@@ -116,35 +116,38 @@ def dice_score(pred, target, smooth = 1.):
     return roundedLoss.mean()
 
 def hausdorff(tens1, tens2):
-    result = 0
+    result = [0 for _ in range(tens1.size(dim=1))]
     numMaps = 0
 
     for i in range(tens1.size(dim=0)):
-        map1 = tens1[i].squeeze(0)
-        map2 = tens2[i].squeeze(0)
+        for mapChannel in range(tens1.size(dim=1)):
+            map1 = tens1[i][mapChannel]
+            map2 = tens2[i][mapChannel]
 
-        if torch.count_nonzero(map2) == 0:
-            continue
+            if torch.count_nonzero(map2) == 0:
+                continue
 
-        cont1 = measure.find_contours(map1.detach().cpu().numpy(), 0.9)
-        cont2 = measure.find_contours(map2.detach().cpu().numpy(), 0.9)
+            cont1 = measure.find_contours(map1.detach().cpu().numpy(), 0.9)
+            cont2 = measure.find_contours(map2.detach().cpu().numpy(), 0.9)
 
-        result = 0
-        numPts = 0
-        for line1 in cont1:
-            for point1 in line1:
-                numPts += 1
-                minDist = float('inf')
-                for line2 in cont2:
-                    for point2 in line2:
-                        minDist = min(minDist, dist(point1, point2))
+            result = 0
+            numPts = 0
+            for line1 in cont1:
+                for point1 in line1:
+                    numPts += 1
+                    minDist = float('inf')
+                    for line2 in cont2:
+                        for point2 in line2:
+                            minDist = min(minDist, dist(point1, point2))
 
-                result = max(result, minDist)
+                    result[mapChannel] += max(result, minDist)
 
-        if numPts > 0:
-            numMaps += 1
+            if numPts > 0:
+                numMaps += 1
 
-    return result if numMaps > 0 else -1
+    print(result)
+
+    return result / numMaps if numMaps > 0 else -1
 
 def dist(p1, p2):
     return math.sqrt(((p2[0] - p1[0]) ** 2) + ((p2[1] - p1[1]) ** 2))
