@@ -3,6 +3,7 @@ import wandb
 from torch import nn
 from torch.nn import functional as F
 import logging
+import numpy as np
 
 def ParseConfig(configFile, vars):
     file = open(configFile).readlines()
@@ -60,9 +61,19 @@ def evaluate(net, testIter, lossFuncs, device=None, encoder=False):
             for i, segmentLoss in enumerate(lossFuncs[0]):
                 l = segmentLoss(yhat[0] if isinstance(yhat, tuple) else yhat, y1)
                 
-                if l >= 0:
-                    metric[0][i] += l
-                    lengths[0][i] += 1
+                if isinstance(l, np.ndarray) and not isinstance(metric[0][i], np.ndarray):
+                    metric[0][i] = np.array([0 for _ in range(y1.size(dim=1))], dtype=np.float64)
+                    lengths[0][i] = np.array([0 for _ in range(y1.size(dim=1))], dtype=np.float64)
+
+                if isinstance(l, np.ndarray) or l >= 0:
+                    if isinstance(l, np.ndarray):
+                        for q, el in enumerate(l):
+                            if el > 0:
+                                metric[0][i][q] += el
+                                lengths[0][i][q] += 1
+                    else:
+                        metric[0][i] += l
+                        lengths[0][i] += 1
 
             for i, classLoss in enumerate(lossFuncs[1]):
                 l = classLoss(yhat[0], y2) if encoder else (classLoss(yhat[1] if isinstance(yhat, tuple) else yhat, y2))
@@ -72,7 +83,10 @@ def evaluate(net, testIter, lossFuncs, device=None, encoder=False):
                     lengths[1][i] += 1
 
     for i in range(len(metric[0])):
-        metric[0][i] /= lengths[0][i] if lengths[0][i] > 0 else 1
+        if isinstance(metric[0][i], np.ndarray):
+            metric[0][i] = np.divide(metric[0][i], lengths[0][i])
+        else:
+            metric[0][i] /= lengths[0][i] if lengths[0][i] > 0 else 1
 
     for i in range(len(metric[1])):
         metric[1][i] /= lengths[1][i] if lengths[1][i] > 0 else 1

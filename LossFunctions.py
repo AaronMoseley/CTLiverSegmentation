@@ -4,6 +4,7 @@ import math
 from skimage import measure
 from sklearn.metrics import f1_score
 from torch.nn import functional as F
+import numpy as np
 
 class BalancedCELoss(nn.Module):
     def __init__(self, weight0=1, weight1=1):
@@ -116,8 +117,8 @@ def dice_score(pred, target, smooth = 1.):
     return roundedLoss.mean()
 
 def hausdorff(tens1, tens2):
-    result = [0 for _ in range(tens1.size(dim=1))]
-    numMaps = 0
+    result = np.array([0 for _ in range(tens1.size(dim=1))])
+    numMaps = np.array([0 for _ in range(tens1.size(dim=1))])
 
     for i in range(tens1.size(dim=0)):
         for mapChannel in range(tens1.size(dim=1)):
@@ -130,7 +131,7 @@ def hausdorff(tens1, tens2):
             cont1 = measure.find_contours(map1.detach().cpu().numpy(), 0.9)
             cont2 = measure.find_contours(map2.detach().cpu().numpy(), 0.9)
 
-            result = 0
+            currMax = 0
             numPts = 0
             for line1 in cont1:
                 for point1 in line1:
@@ -140,14 +141,21 @@ def hausdorff(tens1, tens2):
                         for point2 in line2:
                             minDist = min(minDist, dist(point1, point2))
 
-                    result[mapChannel] += max(result, minDist)
+                    currMax = max(currMax, minDist)
+
+            result[mapChannel] += currMax
 
             if numPts > 0:
-                numMaps += 1
+                numMaps[mapChannel] += 1
 
-    print(result)
+    for i, el in enumerate(numMaps):
+        if el == 0:
+            result[i] = -1
+            numMaps[i] = 1
 
-    return result / numMaps if numMaps > 0 else -1
+    print(np.divide(result, numMaps))
+
+    return np.divide(result, numMaps)
 
 def dist(p1, p2):
     return math.sqrt(((p2[0] - p1[0]) ** 2) + ((p2[1] - p1[1]) ** 2))
