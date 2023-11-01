@@ -153,8 +153,6 @@ def hausdorff(tens1, tens2):
             result[i] = -1
             numMaps[i] = 1
 
-    print(np.divide(result, numMaps))
-
     return np.divide(result, numMaps)
 
 def dist(p1, p2):
