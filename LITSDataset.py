@@ -84,7 +84,7 @@ class LITSContDataset(Dataset):
         result = []
         result.append(torch.Tensor(self.file["Slice" + str(idx)]["MainSlice"][...]).unsqueeze(0))
         result.append(torch.Tensor(self.file["Slice" + str(idx)]["PositiveSlice"][...]).unsqueeze(0))
-        result.append(torch.Tensor(self.file["Slice" + str(idx)]["NegativeSlice"][...]).unsqueeze(0))
+        #result.append(torch.Tensor(self.file["Slice" + str(idx)]["NegativeSlice"][...]).unsqueeze(0))
         return result
     
     def closeFile(self):

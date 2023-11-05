@@ -300,3 +300,52 @@ def contrastiveTrain(net: nn.Module, distFunc, trainIter, testIter, numEpochs, s
             wandb.log({"Train Loss": loss / numBatches,
                     "Validation Loss": validationLoss
                     })
+
+def simCLRTrain(net: nn.Module, distFunc, trainIter, numEpochs, startEpoch, learnRate, device: torch.device, modelFileName, epochsToSave, useWandB=False, cosineAnnealing=True, restartEpochs=-1):
+    print(f"Training on {device}")
+
+    net.to(device)
+    optimizer = torch.optim.Adam(net.parameters(), lr=learnRate)
+
+    #Setting restartEpochs to a negative will use no warm restarts, otherwise will use warm restarts 
+    if cosineAnnealing:
+        if restartEpochs <= 0:
+            scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=numEpochs)
+        else:
+            scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, restartEpochs, T_mult=1)
+
+    numBatches = len(trainIter)
+
+    for epoch in range(startEpoch, numEpochs):
+        net.train()
+        
+        loss = 0
+
+        for i, (main, pos) in enumerate(trainIter):
+            optimizer.zero_grad()
+            
+            main = main.to(device)
+            pos = pos.to(device)
+            
+            mainRep, _, _, _, _, _ = net(main)
+            posRep, _, _, _, _, _ = net(pos)
+            
+            l = distFunc(mainRep, posRep)
+
+            l.backward()
+            optimizer.step()
+
+            if cosineAnnealing:
+                scheduler.step(epoch + i / numBatches)
+
+            loss += l
+
+        #Checkpoints model
+        if (epoch + 1) % epochsToSave == 0:
+            torch.save(net.state_dict(), modelFileName + "Epoch" + str(epoch))
+
+        print(f"Epoch {epoch}:\nTrain Loss: {loss / numBatches}")
+
+        #Externally logs epoch info to WandB
+        if useWandB:
+            wandb.log({"Train Loss": loss / numBatches})

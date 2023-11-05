@@ -52,7 +52,7 @@ class UNet(nn.Module):
         else:
             self.encoder = encoder
 
-        self.decoder = Decoder(n_class=n_class, block=block)
+        self.decoder = Decoder(n_class=n_class)
         self.multiTask = multiTask
 
         self.classThreshold = classThreshold

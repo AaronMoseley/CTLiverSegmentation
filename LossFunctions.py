@@ -66,6 +66,36 @@ class ContrastiveLossCosine(nn.Module):
         result = -1 * torch.log(result)
 
         return result
+    
+class ContrastiveLossSimCLR(nn.Module):
+    def __init__(self, temp, device):
+        super().__init__()
+        
+        self.temp = temp
+        self.device = device
+
+    def forward(self, pred, positive):
+        cos = nn.CosineSimilarity(dim=0)
+        result = 0
+        for i, anch in enumerate(pred):
+            cosPos = torch.exp(cos(anch, positive[i]) / self.temp)
+            negSum = 0
+            
+            for j, anch2 in enumerate(pred):
+                if i == j:
+                    continue
+                
+                negSum += torch.exp(cos(anch, anch2) / self.temp)
+
+            for neg in positive:
+                negSum += torch.exp(cos(anch, neg) / self.temp)
+
+            curr = cosPos / negSum
+            curr = -1 * torch.log(curr)
+
+            result += curr
+
+        return torch.Tensor(result / pred.size(dim=0))
 
 def ContrastiveLossEuclidean(pred, positive, negative):
     posDist = (positive - pred).pow(2)
