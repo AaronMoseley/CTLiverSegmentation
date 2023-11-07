@@ -151,7 +151,8 @@ def hausdorff(tens1, tens2):
     numMaps = np.array([0 for _ in range(tens1.size(dim=1))])
 
     for i in range(tens1.size(dim=0)):
-        for mapChannel in range(tens1.size(dim=1)):
+        for mapChannel in [0]:
+        #for mapChannel in range(tens1.size(dim=1)):
             map1 = tens1[i][mapChannel]
             map2 = tens2[i][mapChannel]
 
