@@ -116,7 +116,7 @@ class Encoder(nn.Module):
         self.dconv_down2 = block(16, 32)
         self.dconv_down3 = block(32, 64)
         self.dconv_down4 = block(64, 128)
-        self.dconv_down5 = block(128, 256)     
+        self.dconv_down5 = block(128, 256)    
         self.avgpool = nn.AdaptiveAvgPool2d((1,1))       
         self.fc = nn.Linear(256, 1) 
         self.sigm = nn.Sigmoid()
@@ -155,6 +155,7 @@ class ContrastiveEncoder(nn.Module):
         self.dconv_down3 = block(32, 64)
         self.dconv_down4 = block(64, 128)
         self.dconv_down5 = block(128, 256)
+        
         self.maxpool = nn.MaxPool2d(2)
 
         self.avgPool = nn.AdaptiveAvgPool2d((1,1))

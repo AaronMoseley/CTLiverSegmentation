@@ -1,6 +1,6 @@
 #Standard
 batchSize=20
-learnRate=0.0001
+learnRate=0.01
 epochs=100
 #
 #> 0 if starting from checkpoint
