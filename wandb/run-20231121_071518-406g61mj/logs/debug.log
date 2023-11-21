@@ -28,3 +28,13 @@ config: {'BatchSize': 10, 'LearnRate': 0.001, 'Epochs': 100, 'StartDimension': 3
 2023-11-21 07:15:49,237 INFO    MainThread:12008 [wandb_run.py:_redirect():2079] Wrapping output streams.
 2023-11-21 07:15:49,237 INFO    MainThread:12008 [wandb_run.py:_redirect():2104] Redirects installed.
 2023-11-21 07:15:49,240 INFO    MainThread:12008 [wandb_init.py:init():839] run started, returning control to user process
+2023-11-21 09:52:39,972 INFO    MainThread:12008 [wandb_run.py:_finish():1894] finishing run amoseley018/MultiClassLiTS/406g61mj
+2023-11-21 09:52:39,972 INFO    MainThread:12008 [jupyter.py:save_history():445] not saving jupyter history
+2023-11-21 09:52:39,972 INFO    MainThread:12008 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-11-21 09:52:39,972 INFO    MainThread:12008 [wandb_init.py:_jupyter_teardown():452] cleaning up jupyter logic
+2023-11-21 09:52:39,973 INFO    MainThread:12008 [wandb_run.py:_atexit_cleanup():2128] got exitcode: 0
+2023-11-21 09:52:39,973 INFO    MainThread:12008 [wandb_run.py:_restore():2111] restore
+2023-11-21 09:52:39,973 INFO    MainThread:12008 [wandb_run.py:_restore():2117] restore done
+2023-11-21 09:52:42,903 INFO    MainThread:12008 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-11-21 09:52:42,904 INFO    MainThread:12008 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-11-21 09:52:42,917 INFO    MainThread:12008 [wandb_run.py:_footer_sync_info():3440] logging synced files

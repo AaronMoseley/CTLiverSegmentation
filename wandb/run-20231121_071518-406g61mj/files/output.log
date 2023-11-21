@@ -195,3 +195,8 @@ Train Loss: 2.924398183822632 Validation Loss: 1.2375391721725464 weighted_dice_
 Epoch 96:
 Train Loss: 2.9178943634033203 Validation Loss: 1.1971229314804077 weighted_dice_loss: tensor(1.1971, device='cuda:0') dice_score: tensor(0.7495, device='cuda:0')
 Epoch 97:
+Train Loss: 2.9135851860046387 Validation Loss: 1.2286639213562012 weighted_dice_loss: tensor(1.2287, device='cuda:0') dice_score: tensor(0.7229, device='cuda:0')
+Epoch 98:
+Train Loss: 2.9104292392730713 Validation Loss: 1.1716474294662476 weighted_dice_loss: tensor(1.1716, device='cuda:0') dice_score: tensor(0.7426, device='cuda:0')
+Epoch 99:
+Train Loss: 2.906015634536743 Validation Loss: 1.1521581411361694 weighted_dice_loss: tensor(1.1522, device='cuda:0') dice_score: tensor(0.7705, device='cuda:0')

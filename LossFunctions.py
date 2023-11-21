@@ -123,7 +123,7 @@ def accuracy(input, target):
 
     return accuratePreds / input.size()[0]
 
-def weighted_dice_loss(pred, target, smooth = 1., weights=torch.Tensor([1, 10])):
+def weighted_dice_loss(pred, target, smooth = 1., weights=torch.Tensor([1, 5])):
     dim = pred.size()[2]
     weights = weights.to(target.get_device())
 

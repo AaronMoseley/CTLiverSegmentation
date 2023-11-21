@@ -3932,3 +3932,183 @@
 2023-11-21 09:50:40,744 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: summary_record
 2023-11-21 09:50:40,744 INFO    SenderThread:2976 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
 2023-11-21 09:50:40,893 INFO    Thread-85 :2976 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\wandb-summary.json
+2023-11-21 09:50:42,775 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:50:42,910 INFO    Thread-85 :2976 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\output.log
+2023-11-21 09:50:47,826 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:50:51,809 DEBUG   SenderThread:2976 [sender.py:send():379] send: stats
+2023-11-21 09:50:53,826 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:50:54,392 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:50:54,392 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:50:59,576 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:04,594 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:09,394 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:51:09,394 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:51:10,533 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:15,559 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:20,593 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:21,826 DEBUG   SenderThread:2976 [sender.py:send():379] send: stats
+2023-11-21 09:51:24,393 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:51:24,393 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:51:26,560 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:31,608 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:36,645 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:39,397 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:51:39,397 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:51:42,508 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:47,527 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:51,842 DEBUG   SenderThread:2976 [sender.py:send():379] send: stats
+2023-11-21 09:51:52,859 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:51:54,427 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:51:54,428 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:51:58,597 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:03,642 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:08,676 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:09,442 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:52:09,442 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:52:14,620 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:19,686 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:21,859 DEBUG   SenderThread:2976 [sender.py:send():379] send: stats
+2023-11-21 09:52:24,444 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:52:24,444 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:52:25,503 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:30,567 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:35,630 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:39,446 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-21 09:52:39,447 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: stop_status
+2023-11-21 09:52:39,945 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-21 09:52:39,947 DEBUG   SenderThread:2976 [sender.py:send():379] send: history
+2023-11-21 09:52:39,947 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: summary_record
+2023-11-21 09:52:39,948 INFO    SenderThread:2976 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-11-21 09:52:39,973 DEBUG   SenderThread:2976 [sender.py:send():379] send: telemetry
+2023-11-21 09:52:39,975 DEBUG   SenderThread:2976 [sender.py:send():379] send: exit
+2023-11-21 09:52:39,975 INFO    SenderThread:2976 [sender.py:send_exit():584] handling exit code: 0
+2023-11-21 09:52:39,975 INFO    SenderThread:2976 [sender.py:send_exit():586] handling runtime: 9440
+2023-11-21 09:52:39,975 INFO    SenderThread:2976 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-11-21 09:52:39,976 INFO    SenderThread:2976 [sender.py:send_exit():592] send defer
+2023-11-21 09:52:39,976 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:39,976 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 0
+2023-11-21 09:52:39,977 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:39,977 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-11-21 09:52:39,977 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 1
+2023-11-21 09:52:39,977 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:39,977 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 1
+2023-11-21 09:52:39,978 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:39,978 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-11-21 09:52:39,978 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 2
+2023-11-21 09:52:39,978 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:39,978 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 2
+2023-11-21 09:52:39,979 INFO    HandlerThread:2976 [system_monitor.py:finish():190] Stopping system monitor
+2023-11-21 09:52:39,979 DEBUG   SystemMonitor:2976 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-11-21 09:52:39,986 DEBUG   SystemMonitor:2976 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-11-21 09:52:39,986 INFO    HandlerThread:2976 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-21 09:52:39,987 INFO    HandlerThread:2976 [interfaces.py:finish():202] Joined disk monitor
+2023-11-21 09:52:40,041 INFO    HandlerThread:2976 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-21 09:52:40,042 INFO    HandlerThread:2976 [interfaces.py:finish():202] Joined memory monitor
+2023-11-21 09:52:40,042 INFO    HandlerThread:2976 [interfaces.py:finish():202] Joined network monitor
+2023-11-21 09:52:40,043 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,043 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-11-21 09:52:40,043 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 3
+2023-11-21 09:52:40,044 DEBUG   SenderThread:2976 [sender.py:send():379] send: stats
+2023-11-21 09:52:40,044 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:40,044 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 3
+2023-11-21 09:52:40,045 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,045 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-11-21 09:52:40,045 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 4
+2023-11-21 09:52:40,046 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:40,046 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 4
+2023-11-21 09:52:40,046 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,046 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-11-21 09:52:40,046 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 5
+2023-11-21 09:52:40,047 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:40,047 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 5
+2023-11-21 09:52:40,047 DEBUG   SenderThread:2976 [sender.py:send():379] send: summary
+2023-11-21 09:52:40,048 INFO    SenderThread:2976 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-11-21 09:52:40,050 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,050 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-11-21 09:52:40,050 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 6
+2023-11-21 09:52:40,050 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:40,050 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 6
+2023-11-21 09:52:40,051 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,051 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-11-21 09:52:40,056 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: status_report
+2023-11-21 09:52:40,064 INFO    Thread-85 :2976 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\wandb-summary.json
+2023-11-21 09:52:40,134 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 7
+2023-11-21 09:52:40,134 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:40,135 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 7
+2023-11-21 09:52:40,135 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,135 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-11-21 09:52:40,692 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 8
+2023-11-21 09:52:40,692 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:40,693 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 8
+2023-11-21 09:52:40,693 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,693 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-11-21 09:52:40,694 INFO    SenderThread:2976 [job_builder.py:build():281] Attempting to build job artifact
+2023-11-21 09:52:40,695 INFO    SenderThread:2976 [job_builder.py:build():297] run is notebook based run
+2023-11-21 09:52:40,695 INFO    SenderThread:2976 [job_builder.py:_get_source_type():411] no source found
+2023-11-21 09:52:40,695 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 9
+2023-11-21 09:52:40,696 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:40,696 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 9
+2023-11-21 09:52:40,696 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:40,697 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-11-21 09:52:40,697 INFO    SenderThread:2976 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-21 09:52:40,990 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-21 09:52:41,067 INFO    SenderThread:2976 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\output.log
+2023-11-21 09:52:41,067 INFO    SenderThread:2976 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\config.yaml
+2023-11-21 09:52:41,068 INFO    SenderThread:2976 [dir_watcher.py:finish():388] scan: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files
+2023-11-21 09:52:41,068 INFO    SenderThread:2976 [dir_watcher.py:finish():402] scan save: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\conda-environment.yaml conda-environment.yaml
+2023-11-21 09:52:41,069 INFO    SenderThread:2976 [dir_watcher.py:finish():402] scan save: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\config.yaml config.yaml
+2023-11-21 09:52:41,072 INFO    SenderThread:2976 [dir_watcher.py:finish():402] scan save: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\output.log output.log
+2023-11-21 09:52:41,077 INFO    SenderThread:2976 [dir_watcher.py:finish():402] scan save: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\requirements.txt requirements.txt
+2023-11-21 09:52:41,081 INFO    SenderThread:2976 [dir_watcher.py:finish():402] scan save: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\wandb-metadata.json wandb-metadata.json
+2023-11-21 09:52:41,081 INFO    SenderThread:2976 [dir_watcher.py:finish():402] scan save: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\wandb-summary.json wandb-summary.json
+2023-11-21 09:52:41,086 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 10
+2023-11-21 09:52:41,086 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: poll_exit
+2023-11-21 09:52:41,086 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:41,087 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 10
+2023-11-21 09:52:41,088 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:41,088 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-11-21 09:52:41,088 INFO    SenderThread:2976 [file_pusher.py:finish():159] shutting down file pusher
+2023-11-21 09:52:41,373 INFO    wandb-upload_0:2976 [upload_job.py:push():131] Uploaded file c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\conda-environment.yaml
+2023-11-21 09:52:41,394 INFO    wandb-upload_3:2976 [upload_job.py:push():131] Uploaded file c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\requirements.txt
+2023-11-21 09:52:41,404 INFO    wandb-upload_1:2976 [upload_job.py:push():131] Uploaded file c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\config.yaml
+2023-11-21 09:52:41,409 INFO    wandb-upload_2:2976 [upload_job.py:push():131] Uploaded file c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\output.log
+2023-11-21 09:52:41,430 INFO    wandb-upload_4:2976 [upload_job.py:push():131] Uploaded file c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\files\wandb-summary.json
+2023-11-21 09:52:41,644 INFO    Thread-84 (_thread_body):2976 [sender.py:transition_state():612] send defer: 11
+2023-11-21 09:52:41,644 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:41,645 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 11
+2023-11-21 09:52:41,646 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:41,646 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-11-21 09:52:41,646 INFO    SenderThread:2976 [file_pusher.py:join():164] waiting for file pusher
+2023-11-21 09:52:41,646 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 12
+2023-11-21 09:52:41,647 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:41,647 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 12
+2023-11-21 09:52:41,648 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:41,648 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-11-21 09:52:41,648 INFO    SenderThread:2976 [file_stream.py:finish():593] file stream finish called
+2023-11-21 09:52:41,855 INFO    SenderThread:2976 [file_stream.py:finish():597] file stream finish is done
+2023-11-21 09:52:41,856 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 13
+2023-11-21 09:52:41,856 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:41,856 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 13
+2023-11-21 09:52:41,857 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:41,857 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-11-21 09:52:41,857 INFO    SenderThread:2976 [sender.py:transition_state():612] send defer: 14
+2023-11-21 09:52:41,857 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: defer
+2023-11-21 09:52:41,857 INFO    HandlerThread:2976 [handler.py:handle_request_defer():170] handle defer: 14
+2023-11-21 09:52:41,858 DEBUG   SenderThread:2976 [sender.py:send():379] send: final
+2023-11-21 09:52:41,858 DEBUG   SenderThread:2976 [sender.py:send():379] send: footer
+2023-11-21 09:52:41,859 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: defer
+2023-11-21 09:52:41,859 INFO    SenderThread:2976 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-11-21 09:52:41,860 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-21 09:52:41,861 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: server_info
+2023-11-21 09:52:41,861 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: get_summary
+2023-11-21 09:52:41,862 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: poll_exit
+2023-11-21 09:52:41,862 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: server_info
+2023-11-21 09:52:41,865 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: sampled_history
+2023-11-21 09:52:41,867 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: job_info
+2023-11-21 09:52:41,898 DEBUG   SenderThread:2976 [sender.py:send_request():406] send_request: job_info
+2023-11-21 09:52:41,900 DEBUG   HandlerThread:2976 [handler.py:handle_request():144] handle_request: shutdown
+2023-11-21 09:52:41,900 INFO    HandlerThread:2976 [handler.py:finish():861] shutting down handler
+2023-11-21 09:52:42,873 INFO    WriterThread:2976 [datastore.py:close():294] close: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231121_071518-406g61mj\run-406g61mj.wandb
+2023-11-21 09:52:42,903 INFO    SenderThread:2976 [sender.py:finish():1552] shutting down sender
+2023-11-21 09:52:42,903 INFO    SenderThread:2976 [file_pusher.py:finish():159] shutting down file pusher
+2023-11-21 09:52:42,903 INFO    SenderThread:2976 [file_pusher.py:join():164] waiting for file pusher
