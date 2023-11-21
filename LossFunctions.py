@@ -123,10 +123,30 @@ def accuracy(input, target):
 
     return accuratePreds / input.size()[0]
 
+def weighted_dice_loss(pred, target, smooth = 1., weights=torch.Tensor([1, 10])):
+    dim = pred.size()[2]
+    weights = weights.to(target.get_device())
+
+    #slice, channel, height, width
+    if dim != target.size()[2]:
+        target = F.interpolate(target, size=int(dim))
+
+    pred = pred.contiguous()
+    target = target.contiguous()    
+
+    intersection = (pred.mul(target)).sum(dim=2).sum(dim=2)
+    loss = (1 - ((2. * intersection + smooth) / (pred.sum(dim=2).sum(dim=2) + target.sum(dim=2).sum(dim=2) + smooth)))
+
+    loss = loss.mean(dim=0)
+
+    finalLoss = torch.mul(loss, weights).sum()
+    return finalLoss
+
 def dice_loss(pred, target, smooth = 1.):
     #target = torch.clamp(target, min=0, max=1)
     dim = pred.size()[2]
     
+    #slice, channel, height, width
     if dim != target.size()[2]:
         target = F.interpolate(target, size=int(dim))
 
