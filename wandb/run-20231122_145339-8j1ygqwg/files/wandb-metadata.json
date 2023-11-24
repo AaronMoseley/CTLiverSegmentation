@@ -1,0 +1,49 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-11-22T19:53:40.819940",
+    "startedAt": "2023-11-22T19:53:39.430614",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/AaronMoseley/CTLiverSegmentation.git",
+        "commit": "4d9f98293d33f295c5f5d3adfbe12ee25a0aef60"
+    },
+    "email": "36460809+AaronMoseley@users.noreply.github.com",
+    "root": "D:/GitHub/CTLiverSegmentation",
+    "host": "DESKTOP-7RSGIDI",
+    "username": "amose",
+    "executable": "c:\\Users\\amose\\anaconda3\\envs\\MedicalImaging\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 6,
+    "cpu_freq": {
+        "current": 3696.0,
+        "min": 0.0,
+        "max": 3696.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3696.0,
+            "min": 0.0,
+            "max": 3696.0
+        }
+    ],
+    "disk": {
+        "total": 1862.9999961853027,
+        "used": 1461.6568870544434
+    },
+    "gpu": "NVIDIA GeForce RTX 2070",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2070",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 31.92159652709961
+    }
+}

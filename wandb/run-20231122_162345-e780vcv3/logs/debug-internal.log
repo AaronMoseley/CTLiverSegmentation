@@ -1,0 +1,1410 @@
+2023-11-22 16:23:46,326 INFO    StreamThr :20496 [internal.py:wandb_internal():86] W&B internal server running at pid: 20496, started at: 2023-11-22 16:23:46.324946
+2023-11-22 16:23:46,329 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status
+2023-11-22 16:23:46,331 INFO    WriterThread:20496 [datastore.py:open_for_write():85] open: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\run-e780vcv3.wandb
+2023-11-22 16:23:46,335 DEBUG   SenderThread:20496 [sender.py:send():369] send: header
+2023-11-22 16:23:46,335 DEBUG   SenderThread:20496 [sender.py:send():369] send: run
+2023-11-22 16:23:46,986 INFO    SenderThread:20496 [dir_watcher.py:__init__():211] watching files in: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files
+2023-11-22 16:23:46,988 INFO    SenderThread:20496 [sender.py:_start_run_threads():1100] run started: e780vcv3 with start time 1700688225.857957
+2023-11-22 16:23:46,988 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:23:46,989 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:23:46,991 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: check_version
+2023-11-22 16:23:46,991 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: check_version
+2023-11-22 16:23:47,392 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: run_start
+2023-11-22 16:23:47,399 DEBUG   HandlerThread:20496 [system_info.py:__init__():31] System info init
+2023-11-22 16:23:47,399 DEBUG   HandlerThread:20496 [system_info.py:__init__():46] System info init done
+2023-11-22 16:23:47,400 INFO    HandlerThread:20496 [system_monitor.py:start():181] Starting system monitor
+2023-11-22 16:23:47,400 INFO    SystemMonitor:20496 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-11-22 16:23:47,400 INFO    HandlerThread:20496 [system_monitor.py:probe():201] Collecting system info
+2023-11-22 16:23:47,402 INFO    SystemMonitor:20496 [interfaces.py:start():190] Started cpu monitoring
+2023-11-22 16:23:47,402 INFO    SystemMonitor:20496 [interfaces.py:start():190] Started disk monitoring
+2023-11-22 16:23:47,404 DEBUG   HandlerThread:20496 [system_info.py:probe():195] Probing system
+2023-11-22 16:23:47,405 INFO    SystemMonitor:20496 [interfaces.py:start():190] Started gpu monitoring
+2023-11-22 16:23:47,408 INFO    SystemMonitor:20496 [interfaces.py:start():190] Started memory monitoring
+2023-11-22 16:23:47,415 INFO    SystemMonitor:20496 [interfaces.py:start():190] Started network monitoring
+2023-11-22 16:23:47,416 DEBUG   HandlerThread:20496 [system_info.py:_probe_git():180] Probing git
+2023-11-22 16:23:47,478 DEBUG   HandlerThread:20496 [system_info.py:_probe_git():188] Probing git done
+2023-11-22 16:23:47,478 DEBUG   HandlerThread:20496 [system_info.py:probe():240] Probing system done
+2023-11-22 16:23:47,478 DEBUG   HandlerThread:20496 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.9.16', 'heartbeatAt': '2023-11-22T21:23:47.404580', 'startedAt': '2023-11-22T21:23:45.848956', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '<python with no main file>', 'git': {'remote': 'https://github.com/AaronMoseley/CTLiverSegmentation.git', 'commit': '4d9f98293d33f295c5f5d3adfbe12ee25a0aef60'}, 'email': '36460809+AaronMoseley@users.noreply.github.com', 'root': 'D:/GitHub/CTLiverSegmentation', 'host': 'DESKTOP-7RSGIDI', 'username': 'amose', 'executable': 'c:\\Users\\amose\\anaconda3\\envs\\MedicalImaging\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 6, 'cpu_freq': {'current': 3696.0, 'min': 0.0, 'max': 3696.0}, 'cpu_freq_per_core': [{'current': 3696.0, 'min': 0.0, 'max': 3696.0}], 'disk': {'total': 1862.9999961853027, 'used': 1461.9076499938965}, 'gpu': 'NVIDIA GeForce RTX 2070', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2070', 'memory_total': 8589934592}], 'memory': {'total': 31.92159652709961}}
+2023-11-22 16:23:47,479 INFO    HandlerThread:20496 [system_monitor.py:probe():211] Finished collecting system info
+2023-11-22 16:23:47,479 INFO    HandlerThread:20496 [system_monitor.py:probe():214] Publishing system info
+2023-11-22 16:23:47,479 DEBUG   HandlerThread:20496 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-11-22 16:23:47,482 DEBUG   HandlerThread:20496 [system_info.py:_save_pip():67] Saving pip packages done
+2023-11-22 16:23:47,482 DEBUG   HandlerThread:20496 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-11-22 16:23:47,990 INFO    Thread-143:20496 [dir_watcher.py:_on_file_created():272] file/dir created: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\conda-environment.yaml
+2023-11-22 16:23:47,991 INFO    Thread-143:20496 [dir_watcher.py:_on_file_created():272] file/dir created: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:23:47,991 INFO    Thread-143:20496 [dir_watcher.py:_on_file_created():272] file/dir created: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\requirements.txt
+2023-11-22 16:23:49,597 DEBUG   HandlerThread:20496 [system_info.py:_save_conda():86] Saving conda packages done
+2023-11-22 16:23:49,598 INFO    HandlerThread:20496 [system_monitor.py:probe():216] Finished publishing system info
+2023-11-22 16:23:49,599 DEBUG   SenderThread:20496 [sender.py:send():369] send: files
+2023-11-22 16:23:49,599 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-11-22 16:23:49,610 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:23:49,611 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:23:50,002 INFO    Thread-143:20496 [dir_watcher.py:_on_file_created():272] file/dir created: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-metadata.json
+2023-11-22 16:23:50,087 DEBUG   SenderThread:20496 [sender.py:send():369] send: telemetry
+2023-11-22 16:23:50,304 INFO    wandb-upload_0:20496 [upload_job.py:push():133] Uploaded file C:\Users\amose\AppData\Local\Temp\tmpq26d8upwwandb\lb016bvv-wandb-metadata.json
+2023-11-22 16:23:51,010 INFO    Thread-143:20496 [dir_watcher.py:_on_file_created():272] file/dir created: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:23:52,109 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:23:53,024 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:23:57,147 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:02,184 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:04,633 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:24:04,634 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:24:07,811 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:08,716 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:24:08,716 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:24:08,716 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:24:08,717 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:24:09,144 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:24:11,159 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:24:13,763 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:18,803 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:19,219 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\config.yaml
+2023-11-22 16:24:19,642 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:24:19,642 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:24:24,861 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:27,133 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:24:27,133 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:24:27,133 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:24:27,134 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:24:27,279 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:24:29,294 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:24:30,162 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:34,641 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:24:34,642 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:24:35,781 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:40,826 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:45,527 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:24:45,527 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:24:45,528 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:24:45,529 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:24:46,422 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:24:46,530 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:47,429 DEBUG   SystemMonitor:20496 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-11-22 16:24:47,429 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:24:47,430 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:24:49,661 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:24:49,661 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:24:51,815 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:24:56,853 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:01,890 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:03,921 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:25:03,922 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:25:03,922 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:25:03,922 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:25:04,557 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:25:04,665 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:25:04,665 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:25:05,564 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:25:07,842 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:12,880 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:17,437 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:25:18,444 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:19,669 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:25:19,669 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:25:22,316 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:25:22,317 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:25:22,317 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:25:22,317 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:25:22,692 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:25:23,699 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:25:24,334 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:29,372 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:34,409 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:34,673 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:25:34,673 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:25:39,803 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:40,702 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:25:40,702 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:25:40,702 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:25:40,702 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:25:40,827 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:25:43,849 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:25:45,740 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:47,445 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:25:49,693 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:25:49,693 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:25:50,762 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:55,799 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:25:59,110 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:25:59,111 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:25:59,111 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:25:59,111 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:25:59,969 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:26:01,131 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:01,984 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:26:04,696 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:26:04,697 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:26:06,789 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:11,826 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:16,864 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:17,453 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:26:17,509 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:26:17,509 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:26:17,510 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:26:17,510 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:26:18,104 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:26:19,717 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:26:19,717 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:26:20,120 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:26:22,800 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:27,838 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:32,875 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:34,720 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:26:34,720 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:26:35,896 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:26:35,896 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:26:35,896 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:26:35,897 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:26:36,239 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:26:37,913 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:38,254 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:26:42,950 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:47,461 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:26:48,468 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:49,739 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:26:49,740 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:26:53,893 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:26:54,310 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:26:54,311 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:26:54,311 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:26:54,311 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:26:54,374 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:26:56,389 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:26:59,349 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:04,387 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:04,759 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:27:04,759 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:27:09,951 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:12,749 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:27:12,750 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:27:12,750 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:27:12,750 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:27:13,517 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:27:14,524 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:27:15,779 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:17,469 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:27:19,763 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:27:19,763 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:27:20,941 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:25,978 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:30,596 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:27:30,596 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:27:30,596 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:27:30,597 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:27:30,644 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:27:31,605 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:32,659 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:27:34,767 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:27:34,767 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:27:36,875 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:41,912 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:46,950 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:47,477 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:27:48,437 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:27:48,437 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:27:48,437 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:27:48,438 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:27:48,779 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:27:49,786 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:27:49,787 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:27:50,794 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:27:52,933 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:27:57,970 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:03,008 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:04,806 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:28:04,806 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:28:06,270 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:28:06,271 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:28:06,271 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:28:06,271 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:28:06,914 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:28:08,293 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:08,929 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:28:13,330 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:17,485 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:28:18,492 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:19,809 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:28:19,810 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:28:23,979 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:24,102 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:28:24,102 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:28:24,102 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:28:24,103 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:28:25,049 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:28:27,064 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:28:29,140 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:34,178 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:34,813 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:28:34,814 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:28:40,021 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:41,945 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:28:41,946 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:28:41,946 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:28:41,946 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:28:42,176 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:28:43,184 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:28:45,973 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:47,493 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:28:49,833 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:28:49,833 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:28:50,995 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:56,033 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:28:59,801 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:28:59,801 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:28:59,801 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:28:59,802 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:29:00,311 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:29:01,319 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:29:01,814 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:04,852 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:29:04,853 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:29:06,976 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:12,013 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:17,051 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:17,501 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:29:17,637 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:29:17,638 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:29:17,638 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:29:17,638 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:29:18,446 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:29:19,454 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:29:19,856 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:29:19,857 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:29:23,003 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:28,040 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:33,078 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:34,860 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:29:34,861 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:29:35,466 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:29:35,466 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:29:35,466 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:29:35,467 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:29:35,574 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:29:37,589 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:29:38,487 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:43,525 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:47,509 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:29:49,523 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:49,880 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:29:49,880 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:29:53,327 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:29:53,328 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:29:53,328 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:29:53,328 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:29:53,709 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:29:55,351 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:29:55,724 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:30:00,389 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:04,884 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:30:04,884 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:30:05,969 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:11,006 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:11,162 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:30:11,163 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:30:11,163 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:30:11,163 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:30:11,844 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:30:13,859 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:30:16,199 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:17,517 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:30:19,903 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:30:19,904 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:30:22,042 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:27,080 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:29,006 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:30:29,006 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:30:29,007 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:30:29,007 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:30:29,979 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:30:29,979 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:30:33,032 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:34,892 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:30:34,892 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:30:38,054 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:43,091 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:46,826 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:30:46,826 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:30:46,826 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:30:46,827 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:30:47,106 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:30:47,525 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:30:48,114 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:30:48,532 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:49,896 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:30:49,896 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:30:54,034 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:30:59,072 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:04,109 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:04,659 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:31:04,659 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:31:04,659 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:31:04,660 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:31:04,900 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:31:04,900 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:31:05,241 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:31:06,249 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:31:10,046 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:15,083 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:17,533 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:31:19,904 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:31:19,904 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:31:21,066 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:22,509 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:31:22,510 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:31:22,510 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:31:22,510 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:31:23,376 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:31:24,384 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:31:26,538 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:31,575 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:34,915 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:31:34,915 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:31:37,062 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:40,341 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:31:40,341 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:31:40,341 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:31:40,342 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:31:40,504 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:31:42,363 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:42,519 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:31:47,401 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:47,541 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:31:49,927 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:31:49,928 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:31:53,105 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:58,142 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:31:58,146 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:31:58,146 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:31:58,146 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:31:58,147 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:31:58,639 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:32:00,654 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:32:03,180 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:04,947 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:32:04,947 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:32:09,116 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:14,154 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:16,002 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:32:16,002 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:32:16,002 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:32:16,003 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:32:16,774 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:32:17,549 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:32:18,789 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:32:19,563 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:19,951 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:32:19,951 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:32:25,143 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:30,181 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:33,842 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:32:33,842 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:32:33,842 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:32:33,842 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:32:33,901 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:32:34,909 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:32:34,955 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:32:34,955 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:32:36,102 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:41,139 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:46,177 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:47,557 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:32:49,974 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:32:49,975 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:32:51,667 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:32:51,667 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:32:51,667 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:32:51,667 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:32:51,668 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:32:52,036 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:32:53,044 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:32:56,701 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:01,739 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:04,994 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:33:04,994 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:33:07,164 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:09,512 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:33:09,512 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:33:09,512 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:33:09,513 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:33:10,171 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:33:11,179 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:33:12,542 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:17,565 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:33:17,565 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:19,998 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:33:19,998 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:33:23,175 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:27,344 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:33:27,345 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:33:27,345 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:33:27,345 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:33:28,306 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:33:28,352 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:29,314 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:33:33,390 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:35,002 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:33:35,002 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:33:39,187 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:44,224 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:45,213 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:33:45,213 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:33:45,213 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:33:45,213 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:33:45,434 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:33:47,449 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:33:47,573 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:33:49,587 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:33:50,006 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:33:50,006 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:33:55,136 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:00,174 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:03,057 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:34:03,057 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:34:03,057 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:34:03,058 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:34:03,569 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:34:05,010 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:34:05,010 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:34:05,584 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:34:06,095 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:11,132 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:16,170 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:17,581 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:34:20,014 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:34:20,014 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:34:20,907 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:34:20,908 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:34:20,908 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:34:20,908 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:34:21,704 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:34:21,920 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:23,719 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:34:26,958 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:31,995 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:35,018 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:34:35,018 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:34:37,095 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:38,759 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:34:38,759 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:34:38,760 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:34:38,760 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:34:38,831 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:34:41,854 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:34:42,783 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:47,589 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:34:48,596 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:50,022 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:34:50,022 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:34:54,160 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:56,613 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:34:56,613 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:34:56,613 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:34:56,614 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:34:56,966 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:34:59,632 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:34:59,989 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:35:04,669 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:05,041 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:35:05,042 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:35:10,234 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:14,449 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:35:14,452 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:35:14,453 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:35:14,453 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:35:15,101 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:35:15,457 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:16,109 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:35:17,597 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:35:20,045 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:35:20,046 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:35:21,192 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:26,230 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:31,267 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:32,281 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:35:32,281 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:35:32,281 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:35:32,282 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:35:33,236 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:35:34,244 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:35:35,049 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:35:35,050 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:35:37,142 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:42,179 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:47,217 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:47,605 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:35:50,069 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:35:50,069 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:35:50,143 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:35:50,144 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:35:50,144 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:35:50,144 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:35:50,364 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:35:52,379 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:35:53,169 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:35:58,206 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:03,244 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:05,088 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:36:05,089 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:36:07,972 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:36:07,972 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:36:07,972 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:36:07,972 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:36:08,499 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:36:08,985 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:10,514 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:36:14,016 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:17,613 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:36:19,627 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:20,092 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:36:20,093 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:36:25,223 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:25,809 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:36:25,810 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:36:25,810 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:36:25,810 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:36:26,634 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:36:28,649 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:36:30,849 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:35,096 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:36:35,097 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:36:36,243 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:41,281 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:43,638 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:36:43,638 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:36:43,639 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:36:43,639 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:36:43,761 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:36:46,659 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:46,784 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:36:47,621 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:36:50,100 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:36:50,101 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:36:52,224 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:36:57,261 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:01,472 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:37:01,472 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:37:01,472 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:37:01,473 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:37:01,896 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:37:02,485 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:02,904 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:37:05,120 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:37:05,120 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:37:08,251 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:13,288 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:17,629 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:37:18,636 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:19,290 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:37:19,291 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:37:19,291 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:37:19,291 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:37:20,031 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:37:20,124 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:37:20,124 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:37:21,039 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:37:24,278 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:29,315 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:34,353 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:35,128 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:37:35,128 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:37:37,130 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:37:37,130 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:37:37,130 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:37:37,131 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:37:37,159 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:37:39,174 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:37:40,150 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:45,187 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:47,637 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:37:50,132 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:37:50,132 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:37:50,284 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:54,990 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:37:54,991 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:37:54,991 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:37:54,991 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:37:55,294 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:37:56,006 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:37:57,309 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:38:01,044 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:05,136 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:38:05,136 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:38:06,252 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:11,289 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:12,834 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:38:12,835 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:38:12,835 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:38:12,835 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:38:13,429 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:38:15,444 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:38:16,869 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:17,645 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:38:20,140 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:38:20,140 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:38:22,310 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:27,347 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:30,665 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:38:30,665 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:38:30,666 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:38:30,666 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:38:31,564 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:38:32,679 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:33,579 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:38:35,144 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:38:35,144 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:38:38,321 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:43,359 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:47,653 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:38:48,493 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:48,493 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:38:48,493 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:38:48,493 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:38:48,494 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:38:48,691 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:38:50,163 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:38:50,164 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:38:51,714 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:38:54,286 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:38:59,324 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:04,361 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:05,183 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:39:05,185 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:39:06,304 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:39:06,304 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:39:06,304 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:39:06,305 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:39:06,826 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:39:07,834 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:39:10,329 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:15,366 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:17,661 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:39:20,187 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:39:20,187 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:39:21,318 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:24,135 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:39:24,136 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:39:24,136 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:39:24,136 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:39:24,961 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:39:25,969 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:39:27,162 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:32,199 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:35,191 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:39:35,191 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:39:37,376 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:41,964 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:39:41,965 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:39:41,965 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:39:41,965 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:39:42,089 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:39:42,972 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:44,104 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:39:47,669 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:39:48,683 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:50,195 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:39:50,195 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:39:54,380 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:59,417 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:39:59,807 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:39:59,807 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:39:59,807 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:39:59,808 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:40:00,224 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:40:02,239 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:40:04,842 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:05,199 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:40:05,199 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:40:10,360 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:15,398 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:17,657 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:40:17,658 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:40:17,658 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:40:17,658 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:40:17,677 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:40:18,359 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:40:20,203 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:40:20,203 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:40:20,374 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:40:21,288 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:26,325 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:31,363 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:35,191 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:40:35,192 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:40:35,506 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:40:35,506 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:40:35,507 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:40:35,507 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:40:36,494 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:40:36,509 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:38,509 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:40:41,546 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:46,584 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:47,685 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:40:50,211 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:40:50,211 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:40:52,381 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:40:53,344 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:40:53,344 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:40:53,344 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:40:53,345 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:40:53,621 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:40:54,629 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:40:58,379 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:03,417 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:05,215 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:41:05,215 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:41:09,307 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:11,184 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:41:11,185 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:41:11,185 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:41:11,185 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:41:11,756 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:41:12,764 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:41:15,214 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:17,693 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:41:20,234 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:41:20,235 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:41:20,390 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:25,427 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:29,004 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:41:29,005 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:41:29,005 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:41:29,005 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:41:29,891 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:41:30,899 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:41:31,022 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:35,238 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:41:35,239 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:41:36,354 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:41,395 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:46,429 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:46,872 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:41:46,873 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:41:46,873 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:41:46,873 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:41:47,019 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:41:47,701 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:41:49,034 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:41:50,258 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:41:50,258 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:41:52,350 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:41:57,388 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:02,425 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:04,696 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:42:04,697 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:42:04,697 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:42:04,697 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:42:05,154 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:42:05,262 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:42:05,262 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:42:07,169 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:42:08,362 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:13,399 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:17,709 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:42:18,716 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:20,266 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:42:20,266 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:42:22,546 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:42:22,547 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:42:22,547 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:42:22,547 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:42:23,289 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:42:24,560 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:25,304 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:42:29,597 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:34,634 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:35,270 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:42:35,270 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:42:40,416 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:40,456 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:42:40,456 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:42:40,456 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:42:40,457 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:42:41,424 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:42:41,424 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:42:45,500 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:47,717 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:42:50,274 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:42:50,274 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:42:51,359 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:56,396 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:42:58,294 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:42:58,294 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:42:58,294 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:42:58,295 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:42:58,551 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:42:59,559 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:43:02,333 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:05,278 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:43:05,278 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:43:07,417 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:12,454 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:16,153 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:43:16,153 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:43:16,153 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:43:16,154 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:43:16,686 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:43:17,694 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:43:17,725 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:43:17,726 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:20,282 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:43:20,282 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:43:23,413 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:28,450 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:33,488 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:33,994 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:43:33,994 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:43:33,994 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:43:33,995 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:43:34,821 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:43:35,286 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:43:35,286 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:43:35,829 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:43:39,440 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:44,477 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:47,733 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:43:49,747 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:50,305 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:43:50,306 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:43:51,828 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:43:51,828 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:43:51,828 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:43:51,829 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:43:51,949 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:43:53,964 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:43:54,847 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:43:59,884 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:04,922 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:05,325 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:44:05,325 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:44:09,669 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:44:09,670 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:44:09,670 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:44:09,670 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:44:10,084 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:44:10,672 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:12,099 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:44:15,710 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:17,741 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:44:20,329 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:44:20,329 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:44:21,491 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:26,529 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:27,486 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:44:27,487 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:44:27,487 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:44:27,487 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:44:28,219 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:44:30,234 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:44:32,527 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:35,348 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:44:35,349 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:44:38,464 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:43,501 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:45,347 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:44:45,347 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:44:45,347 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:44:45,348 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:44:46,354 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:44:47,749 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:44:48,369 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:44:48,756 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:50,368 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:44:50,368 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:44:54,475 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:44:59,513 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:03,186 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:45:03,187 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:45:03,187 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:45:03,187 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:45:03,481 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:45:04,489 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:45:05,016 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:05,372 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:45:05,372 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:45:10,502 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:15,540 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:17,757 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:45:20,376 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:45:20,376 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:45:21,066 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:21,066 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:45:21,067 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:45:21,067 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:45:21,067 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:45:21,616 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:45:22,624 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:45:26,111 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:31,148 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:35,395 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:45:35,396 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:45:36,558 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:38,903 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:45:38,903 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:45:38,904 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:45:38,904 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:45:39,751 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:45:40,759 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:45:41,921 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:46,958 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:47,765 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:45:50,415 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:45:50,415 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:45:52,569 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:56,748 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:45:56,748 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:45:56,749 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:45:56,749 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:45:56,879 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:45:57,762 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:45:58,893 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:46:02,799 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:05,418 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:46:05,419 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:46:08,534 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:13,571 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:14,617 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:46:14,624 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:46:14,624 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:46:14,624 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:46:15,013 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:46:17,028 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:46:17,772 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:46:18,779 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:20,422 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:46:20,423 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:46:24,592 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:29,629 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:32,449 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:46:32,450 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:46:32,450 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:46:32,450 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:46:33,148 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:46:35,039 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:35,163 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:46:35,426 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:46:35,427 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:46:40,619 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:45,659 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:47,780 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:46:50,292 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:46:50,292 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:46:50,292 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:46:50,293 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:46:50,446 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:46:50,446 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:46:51,283 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:46:51,546 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:46:53,298 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:46:56,584 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:01,621 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:05,450 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:47:05,450 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:47:07,620 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:08,135 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:47:08,136 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:47:08,136 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:47:08,136 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:47:08,411 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:47:11,433 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:47:13,169 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:17,788 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:47:18,795 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:20,454 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:47:20,454 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:47:24,623 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:25,990 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:47:25,990 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:47:25,990 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:47:25,990 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:47:26,546 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:47:27,553 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:47:30,017 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:35,055 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:35,458 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:47:35,458 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:47:40,573 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:43,857 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:47:43,858 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:47:43,858 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:47:43,858 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:47:44,681 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:47:45,688 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:47:45,874 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:47,796 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:47:50,477 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:47:50,478 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:47:51,578 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:47:56,615 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:01,653 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:01,691 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:48:01,691 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:48:01,691 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:48:01,692 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:48:01,808 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:48:03,823 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:48:05,481 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:48:05,482 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:48:07,589 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:12,627 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:17,664 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:17,804 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:48:19,540 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:48:19,541 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:48:19,541 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:48:19,541 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:48:19,943 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:48:20,485 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:48:20,486 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:48:21,958 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:48:23,600 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:28,638 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:33,675 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:35,504 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:48:35,505 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:48:37,352 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:48:37,352 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:48:37,352 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:48:37,353 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:48:38,078 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:48:39,364 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:40,093 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:48:44,401 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:47,814 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:48:49,826 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:50,524 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:48:50,524 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:48:55,204 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:48:55,204 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:48:55,205 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:48:55,205 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:48:55,205 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:48:55,206 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:48:58,228 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:49:00,242 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:05,528 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:49:05,529 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:49:05,686 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:10,720 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:13,044 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:49:13,044 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:49:13,044 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:49:13,045 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:49:13,340 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:49:14,348 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:49:16,068 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:17,820 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:49:20,532 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:49:20,532 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:49:21,648 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:26,685 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:30,911 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:49:30,911 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:49:30,911 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:49:30,912 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:49:31,475 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:49:31,924 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:32,483 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:49:35,536 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:49:35,536 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:49:37,690 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:42,728 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:47,765 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:47,828 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:49:48,737 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:49:48,738 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:49:48,738 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:49:48,738 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:49:49,610 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:49:50,555 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:49:50,556 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:49:50,618 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:49:53,733 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:49:58,770 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:03,808 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:05,559 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:50:05,560 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:50:06,565 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:50:06,566 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:50:06,566 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:50:06,566 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:50:06,738 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:50:08,753 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:50:09,589 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:14,627 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:17,836 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:50:19,850 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:20,563 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:50:20,564 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:50:24,418 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:50:24,418 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:50:24,418 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:50:24,419 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:50:24,873 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:50:25,430 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:26,888 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:50:30,468 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:35,583 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:50:35,583 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:50:35,680 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:40,713 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:42,273 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:50:42,274 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:50:42,274 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:50:42,274 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:50:43,008 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:50:45,023 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:50:46,309 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:47,844 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:50:50,587 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:50:50,587 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:50:51,765 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:50:56,802 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:00,115 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:51:00,115 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:51:00,115 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:51:00,116 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:51:00,135 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:51:02,134 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:03,158 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:51:05,594 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:51:05,594 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:51:07,683 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:12,721 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:17,758 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:17,852 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:51:17,950 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:51:17,950 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:51:17,950 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:51:17,951 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:51:18,270 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:51:19,278 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:51:20,595 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:51:20,595 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:51:22,765 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:27,802 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:32,840 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:35,614 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:51:35,615 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:51:35,792 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:51:35,793 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:51:35,793 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:51:35,793 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:51:36,405 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:51:37,413 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:51:38,823 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:43,860 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:47,860 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:51:48,867 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:50,618 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:51:50,619 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:51:53,631 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:51:53,632 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:51:53,632 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:51:53,633 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:51:54,540 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:51:54,648 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:51:55,548 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:51:59,686 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:04,723 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:05,622 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:52:05,623 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:52:09,745 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:11,454 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:52:11,454 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:52:11,454 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:52:11,455 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:52:11,668 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:52:13,683 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:52:15,480 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:17,868 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:52:20,626 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:52:20,627 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:52:20,778 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:25,819 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:29,307 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:52:29,307 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:52:29,308 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:52:29,308 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:52:29,803 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:52:31,321 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:31,818 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:52:35,646 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:52:35,646 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:52:36,715 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:41,753 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:46,790 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:47,155 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:52:47,155 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:52:47,155 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:52:47,155 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:52:47,883 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:52:47,938 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:52:49,953 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:52:50,650 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:52:50,650 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:52:52,758 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:52:57,795 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:02,833 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:05,037 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:53:05,037 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:53:05,037 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:53:05,038 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:53:05,068 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:53:05,654 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:53:05,654 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:53:08,088 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:53:08,831 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:13,869 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:17,884 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:53:18,891 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:20,658 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:53:20,659 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:53:22,866 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:53:22,866 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:53:22,866 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:53:22,866 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:53:23,200 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:53:24,208 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:53:24,889 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:29,927 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:34,964 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:35,677 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-22 16:53:35,678 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: stop_status
+2023-11-22 16:53:40,722 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:40,722 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-22 16:53:40,722 DEBUG   SenderThread:20496 [sender.py:send():369] send: history
+2023-11-22 16:53:40,722 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: summary_record
+2023-11-22 16:53:40,723 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:53:40,732 DEBUG   SenderThread:20496 [sender.py:send():369] send: telemetry
+2023-11-22 16:53:40,732 DEBUG   SenderThread:20496 [sender.py:send():369] send: exit
+2023-11-22 16:53:40,732 INFO    SenderThread:20496 [sender.py:send_exit():574] handling exit code: 0
+2023-11-22 16:53:40,733 INFO    SenderThread:20496 [sender.py:send_exit():576] handling runtime: 1793
+2023-11-22 16:53:40,733 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:53:40,733 INFO    SenderThread:20496 [sender.py:send_exit():582] send defer
+2023-11-22 16:53:40,733 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,733 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 0
+2023-11-22 16:53:40,733 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,733 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-11-22 16:53:40,734 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 1
+2023-11-22 16:53:40,734 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,734 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 1
+2023-11-22 16:53:40,734 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,734 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-11-22 16:53:40,734 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 2
+2023-11-22 16:53:40,734 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,734 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 2
+2023-11-22 16:53:40,734 INFO    HandlerThread:20496 [system_monitor.py:finish():190] Stopping system monitor
+2023-11-22 16:53:40,738 DEBUG   SystemMonitor:20496 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-11-22 16:53:40,738 DEBUG   SystemMonitor:20496 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-11-22 16:53:40,738 INFO    HandlerThread:20496 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-22 16:53:40,739 INFO    HandlerThread:20496 [interfaces.py:finish():202] Joined disk monitor
+2023-11-22 16:53:40,763 INFO    HandlerThread:20496 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-22 16:53:40,763 INFO    HandlerThread:20496 [interfaces.py:finish():202] Joined memory monitor
+2023-11-22 16:53:40,763 INFO    HandlerThread:20496 [interfaces.py:finish():202] Joined network monitor
+2023-11-22 16:53:40,764 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,764 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-11-22 16:53:40,764 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 3
+2023-11-22 16:53:40,764 DEBUG   SenderThread:20496 [sender.py:send():369] send: stats
+2023-11-22 16:53:40,764 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,764 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 3
+2023-11-22 16:53:40,764 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,764 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-11-22 16:53:40,764 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 4
+2023-11-22 16:53:40,764 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,765 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 4
+2023-11-22 16:53:40,765 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,765 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-11-22 16:53:40,765 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 5
+2023-11-22 16:53:40,765 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,765 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 5
+2023-11-22 16:53:40,765 DEBUG   SenderThread:20496 [sender.py:send():369] send: summary
+2023-11-22 16:53:40,766 INFO    SenderThread:20496 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-11-22 16:53:40,766 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,766 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-11-22 16:53:40,766 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 6
+2023-11-22 16:53:40,766 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,766 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 6
+2023-11-22 16:53:40,766 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,766 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-11-22 16:53:40,769 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: status_report
+2023-11-22 16:53:40,878 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 7
+2023-11-22 16:53:40,878 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:40,878 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 7
+2023-11-22 16:53:40,878 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:40,878 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-11-22 16:53:41,334 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:53:41,335 INFO    Thread-143:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\config.yaml
+2023-11-22 16:53:41,412 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 8
+2023-11-22 16:53:41,413 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:41,413 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 8
+2023-11-22 16:53:41,413 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:41,414 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-11-22 16:53:41,414 INFO    SenderThread:20496 [job_builder.py:build():232] Attempting to build job artifact
+2023-11-22 16:53:41,415 INFO    SenderThread:20496 [job_builder.py:build():251] run is notebook based run
+2023-11-22 16:53:41,415 INFO    SenderThread:20496 [job_builder.py:build():256] is repo sourced job
+2023-11-22 16:53:41,416 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 9
+2023-11-22 16:53:41,416 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:41,417 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 9
+2023-11-22 16:53:41,417 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:41,417 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 9
+2023-11-22 16:53:41,417 INFO    SenderThread:20496 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-11-22 16:53:41,749 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-22 16:53:42,350 INFO    SenderThread:20496 [dir_watcher.py:_on_file_modified():289] file/dir modified: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:53:42,352 INFO    SenderThread:20496 [dir_watcher.py:finish():389] scan: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files
+2023-11-22 16:53:42,353 INFO    SenderThread:20496 [dir_watcher.py:finish():403] scan save: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\conda-environment.yaml conda-environment.yaml
+2023-11-22 16:53:42,354 INFO    SenderThread:20496 [dir_watcher.py:finish():403] scan save: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\config.yaml config.yaml
+2023-11-22 16:53:42,356 INFO    SenderThread:20496 [dir_watcher.py:finish():403] scan save: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log output.log
+2023-11-22 16:53:42,362 INFO    SenderThread:20496 [dir_watcher.py:finish():403] scan save: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\requirements.txt requirements.txt
+2023-11-22 16:53:42,368 INFO    SenderThread:20496 [dir_watcher.py:finish():403] scan save: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-metadata.json wandb-metadata.json
+2023-11-22 16:53:42,368 INFO    SenderThread:20496 [dir_watcher.py:finish():403] scan save: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json wandb-summary.json
+2023-11-22 16:53:42,374 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 10
+2023-11-22 16:53:42,375 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: poll_exit
+2023-11-22 16:53:42,375 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:42,375 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 10
+2023-11-22 16:53:42,377 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:42,377 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 10
+2023-11-22 16:53:42,377 INFO    SenderThread:20496 [file_pusher.py:finish():159] shutting down file pusher
+2023-11-22 16:53:42,751 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-22 16:53:42,751 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: poll_exit
+2023-11-22 16:53:43,228 INFO    wandb-upload_0:20496 [upload_job.py:push():133] Uploaded file d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\config.yaml
+2023-11-22 16:53:43,663 INFO    wandb-upload_1:20496 [upload_job.py:push():133] Uploaded file d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\output.log
+2023-11-22 16:53:43,755 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-22 16:53:43,756 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: poll_exit
+2023-11-22 16:53:43,792 INFO    wandb-upload_2:20496 [upload_job.py:push():133] Uploaded file d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\requirements.txt
+2023-11-22 16:53:43,802 INFO    wandb-upload_3:20496 [upload_job.py:push():133] Uploaded file d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\files\wandb-summary.json
+2023-11-22 16:53:44,015 INFO    Thread-142:20496 [sender.py:transition_state():602] send defer: 11
+2023-11-22 16:53:44,016 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:44,017 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 11
+2023-11-22 16:53:44,017 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:44,017 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 11
+2023-11-22 16:53:44,017 INFO    SenderThread:20496 [file_pusher.py:join():164] waiting for file pusher
+2023-11-22 16:53:44,018 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 12
+2023-11-22 16:53:44,018 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:44,018 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 12
+2023-11-22 16:53:44,019 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:44,019 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 12
+2023-11-22 16:53:44,307 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 13
+2023-11-22 16:53:44,307 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:44,307 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 13
+2023-11-22 16:53:44,309 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:44,309 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 13
+2023-11-22 16:53:44,309 INFO    SenderThread:20496 [sender.py:transition_state():602] send defer: 14
+2023-11-22 16:53:44,310 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: defer
+2023-11-22 16:53:44,310 INFO    HandlerThread:20496 [handler.py:handle_request_defer():170] handle defer: 14
+2023-11-22 16:53:44,311 DEBUG   SenderThread:20496 [sender.py:send():369] send: final
+2023-11-22 16:53:44,311 DEBUG   SenderThread:20496 [sender.py:send():369] send: footer
+2023-11-22 16:53:44,311 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: defer
+2023-11-22 16:53:44,311 INFO    SenderThread:20496 [sender.py:send_request_defer():598] handle sender defer: 14
+2023-11-22 16:53:44,313 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-22 16:53:44,314 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: server_info
+2023-11-22 16:53:44,314 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: get_summary
+2023-11-22 16:53:44,315 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: sampled_history
+2023-11-22 16:53:44,316 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: poll_exit
+2023-11-22 16:53:44,318 DEBUG   SenderThread:20496 [sender.py:send_request():396] send_request: server_info
+2023-11-22 16:53:44,446 DEBUG   HandlerThread:20496 [handler.py:handle_request():144] handle_request: shutdown
+2023-11-22 16:53:44,447 INFO    HandlerThread:20496 [handler.py:finish():854] shutting down handler
+2023-11-22 16:53:45,322 INFO    WriterThread:20496 [datastore.py:close():298] close: d:\GitHub\CTLiverSegmentation\wandb\run-20231122_162345-e780vcv3\run-e780vcv3.wandb
+2023-11-22 16:53:45,445 INFO    SenderThread:20496 [sender.py:finish():1526] shutting down sender
+2023-11-22 16:53:45,446 INFO    SenderThread:20496 [file_pusher.py:finish():159] shutting down file pusher
+2023-11-22 16:53:45,446 INFO    SenderThread:20496 [file_pusher.py:join():164] waiting for file pusher
