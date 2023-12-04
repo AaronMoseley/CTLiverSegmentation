@@ -26,7 +26,7 @@ class BalancedCELoss(nn.Module):
                 loss += torch.log(1 - el) * self.weight0
 
         return -1 * loss / len(input)
-  
+
 class FocalLoss(nn.Module):
     def __init__(self, weight0=1, weight1=1, gamma=0):
         super().__init__()
@@ -141,6 +141,12 @@ def weighted_dice_loss(pred, target, smooth = 1., weights=torch.Tensor([1, 5])):
 
     finalLoss = torch.mul(loss, weights).sum()
     return finalLoss
+
+def binary_pixel_ce(pred, target):
+    if pred.size()[1] > 1 or target.size()[1] > 1:
+        print("Warning: only used for binary CE loss, not multiclass")
+
+    return torch.binary_cross_entropy_with_logits(pred, target).mean()
 
 def dice_loss(pred, target, smooth = 1.):
     #target = torch.clamp(target, min=0, max=1)
