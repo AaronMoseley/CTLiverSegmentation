@@ -27,3 +27,13 @@ config: {'BatchSize': 10, 'LearnRate': 0.001, 'Epochs': 100, 'StartDimension': 3
 2023-12-04 14:28:16,329 INFO    MainThread:14240 [wandb_run.py:_redirect():2079] Wrapping output streams.
 2023-12-04 14:28:16,329 INFO    MainThread:14240 [wandb_run.py:_redirect():2104] Redirects installed.
 2023-12-04 14:28:16,329 INFO    MainThread:14240 [wandb_init.py:init():839] run started, returning control to user process
+2023-12-05 08:44:26,456 INFO    MainThread:14240 [wandb_run.py:_finish():1894] finishing run amoseley018/FullLiTSBaseline/o8oui4th
+2023-12-05 08:44:26,456 INFO    MainThread:14240 [jupyter.py:save_history():445] not saving jupyter history
+2023-12-05 08:44:26,456 INFO    MainThread:14240 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-12-05 08:44:26,456 INFO    MainThread:14240 [wandb_init.py:_jupyter_teardown():452] cleaning up jupyter logic
+2023-12-05 08:44:26,456 INFO    MainThread:14240 [wandb_run.py:_atexit_cleanup():2128] got exitcode: 0
+2023-12-05 08:44:26,457 INFO    MainThread:14240 [wandb_run.py:_restore():2111] restore
+2023-12-05 08:44:26,457 INFO    MainThread:14240 [wandb_run.py:_restore():2117] restore done
+2023-12-05 08:44:30,357 INFO    MainThread:14240 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-12-05 08:44:30,358 INFO    MainThread:14240 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-12-05 08:44:30,380 INFO    MainThread:14240 [wandb_run.py:_footer_sync_info():3440] logging synced files
