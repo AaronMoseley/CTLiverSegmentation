@@ -1,5 +1,5 @@
 #Standard
-batchSize=30
+batchSize=3
 learnRate=0.001
 epochs=100
 #
