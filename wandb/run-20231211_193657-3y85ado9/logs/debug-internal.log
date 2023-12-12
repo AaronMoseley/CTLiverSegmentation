@@ -1,0 +1,33 @@
+2023-12-11 19:36:57,710 INFO    StreamThr :4296 [internal.py:wandb_internal():86] W&B internal server running at pid: 4296, started at: 2023-12-11 19:36:57.709327
+2023-12-11 19:36:57,712 DEBUG   HandlerThread:4296 [handler.py:handle_request():144] handle_request: status
+2023-12-11 19:36:57,733 INFO    WriterThread:4296 [datastore.py:open_for_write():85] open: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231211_193657-3y85ado9\run-3y85ado9.wandb
+2023-12-11 19:36:57,735 DEBUG   SenderThread:4296 [sender.py:send():379] send: header
+2023-12-11 19:36:57,737 DEBUG   SenderThread:4296 [sender.py:send():379] send: run
+2023-12-11 19:36:58,032 INFO    SenderThread:4296 [dir_watcher.py:__init__():211] watching files in: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231211_193657-3y85ado9\files
+2023-12-11 19:36:58,032 INFO    SenderThread:4296 [sender.py:_start_run_threads():1121] run started: 3y85ado9 with start time 1702341417.709326
+2023-12-11 19:36:58,035 DEBUG   SenderThread:4296 [sender.py:send_request():406] send_request: summary_record
+2023-12-11 19:36:58,036 INFO    SenderThread:4296 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-12-11 19:36:58,058 DEBUG   HandlerThread:4296 [handler.py:handle_request():144] handle_request: check_version
+2023-12-11 19:36:58,059 DEBUG   SenderThread:4296 [sender.py:send_request():406] send_request: check_version
+2023-12-11 19:36:58,171 DEBUG   HandlerThread:4296 [handler.py:handle_request():144] handle_request: run_start
+2023-12-11 19:36:58,202 DEBUG   HandlerThread:4296 [system_info.py:__init__():31] System info init
+2023-12-11 19:36:58,203 DEBUG   HandlerThread:4296 [system_info.py:__init__():46] System info init done
+2023-12-11 19:36:58,203 INFO    HandlerThread:4296 [system_monitor.py:start():181] Starting system monitor
+2023-12-11 19:36:58,203 INFO    SystemMonitor:4296 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-12-11 19:36:58,204 INFO    HandlerThread:4296 [system_monitor.py:probe():201] Collecting system info
+2023-12-11 19:36:58,209 INFO    SystemMonitor:4296 [interfaces.py:start():190] Started cpu monitoring
+2023-12-11 19:36:58,210 INFO    SystemMonitor:4296 [interfaces.py:start():190] Started disk monitoring
+2023-12-11 19:36:58,211 INFO    SystemMonitor:4296 [interfaces.py:start():190] Started gpu monitoring
+2023-12-11 19:36:58,212 INFO    SystemMonitor:4296 [interfaces.py:start():190] Started memory monitoring
+2023-12-11 19:36:58,222 INFO    SystemMonitor:4296 [interfaces.py:start():190] Started network monitoring
+2023-12-11 19:36:58,222 DEBUG   HandlerThread:4296 [system_info.py:probe():195] Probing system
+2023-12-11 19:36:58,223 DEBUG   HandlerThread:4296 [system_info.py:probe():240] Probing system done
+2023-12-11 19:36:58,223 DEBUG   HandlerThread:4296 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.11.4', 'heartbeatAt': '2023-12-12T00:36:58.222325', 'startedAt': '2023-12-12T00:36:57.682325', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'host': 'magpie', 'username': 'ajmo276', 'executable': 'c:\\Users\\ajmo276\\anaconda3\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2794.0, 'min': 0.0, 'max': 2794.0}, 'cpu_freq_per_core': [{'current': 2794.0, 'min': 0.0, 'max': 2794.0}], 'disk': {'total': 297.5901527404785, 'used': 254.14486694335938}, 'gpu': 'NVIDIA GeForce GTX 1070', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1070', 'memory_total': 8589934592}], 'memory': {'total': 23.997638702392578}}
+2023-12-11 19:36:58,223 INFO    HandlerThread:4296 [system_monitor.py:probe():211] Finished collecting system info
+2023-12-11 19:36:58,223 INFO    HandlerThread:4296 [system_monitor.py:probe():214] Publishing system info
+2023-12-11 19:36:58,223 DEBUG   HandlerThread:4296 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-12-11 19:36:58,226 DEBUG   HandlerThread:4296 [system_info.py:_save_pip():67] Saving pip packages done
+2023-12-11 19:36:58,226 DEBUG   HandlerThread:4296 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-12-11 19:36:59,045 INFO    Thread-12 :4296 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231211_193657-3y85ado9\files\conda-environment.yaml
+2023-12-11 19:36:59,046 INFO    Thread-12 :4296 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231211_193657-3y85ado9\files\requirements.txt
+2023-12-11 19:36:59,046 INFO    Thread-12 :4296 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\wandb\run-20231211_193657-3y85ado9\files\wandb-summary.json
