@@ -1,3 +1,9 @@
+"""
+All external code not written by me
+Publicly available at https://github.com/google-research/simclr
+Slight alterations have been made to be compatible with my dataset-creation code, but nothing that changes the overall behaviour
+"""
+
 #@title Preprocessing functions from data_util.py in SimCLR repository (hidden).
 
 import tensorflow as tf
