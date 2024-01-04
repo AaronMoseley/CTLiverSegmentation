@@ -1,0 +1,29 @@
+2024-01-04 15:27:52,315 INFO    MainThread:5084 [wandb_setup.py:_flush():76] Current SDK version is 0.15.9
+2024-01-04 15:27:52,315 INFO    MainThread:5084 [wandb_setup.py:_flush():76] Configure stats pid to 5084
+2024-01-04 15:27:52,316 INFO    MainThread:5084 [wandb_setup.py:_flush():76] Loading settings from C:\Users\ajmo276\.config\wandb\settings
+2024-01-04 15:27:52,316 INFO    MainThread:5084 [wandb_setup.py:_flush():76] Loading settings from c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\Code\wandb\settings
+2024-01-04 15:27:52,316 INFO    MainThread:5084 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-01-04 15:27:52,316 INFO    MainThread:5084 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-01-04 15:27:52,333 INFO    MainThread:5084 [wandb_init.py:_log_setup():524] Logging user logs to c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\Code\wandb\run-20240104_152752-py3rh2e1\logs\debug.log
+2024-01-04 15:27:52,334 INFO    MainThread:5084 [wandb_init.py:_log_setup():525] Logging internal logs to c:\Users\ajmo276\Documents\GitHub\CTLiverSegmentation\Code\wandb\run-20240104_152752-py3rh2e1\logs\debug-internal.log
+2024-01-04 15:27:52,334 INFO    MainThread:5084 [wandb_init.py:_jupyter_setup():470] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001E794B66F90>
+2024-01-04 15:27:52,334 INFO    MainThread:5084 [wandb_init.py:init():564] calling init triggers
+2024-01-04 15:27:52,334 INFO    MainThread:5084 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'BatchSize': 30, 'LearnRate': 0.001, 'Epochs': 100, 'StartDimension': 32, 'EpochsToDouble': 25}
+2024-01-04 15:27:52,335 INFO    MainThread:5084 [wandb_init.py:init():613] starting backend
+2024-01-04 15:27:52,335 INFO    MainThread:5084 [wandb_init.py:init():617] setting up manager
+2024-01-04 15:27:52,348 INFO    MainThread:5084 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2024-01-04 15:27:52,354 INFO    MainThread:5084 [wandb_init.py:init():623] backend started and connected
+2024-01-04 15:27:52,381 INFO    MainThread:5084 [wandb_run.py:_label_probe_notebook():1234] probe notebook
+2024-01-04 15:27:52,383 INFO    MainThread:5084 [wandb_run.py:_label_probe_notebook():1244] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-01-04 15:27:52,383 INFO    MainThread:5084 [wandb_init.py:init():714] updated telemetry
+2024-01-04 15:27:52,384 INFO    MainThread:5084 [wandb_init.py:init():747] communicating run to backend with 60.0 second timeout
+2024-01-04 15:27:52,723 INFO    MainThread:5084 [wandb_run.py:_on_init():2180] communicating current version
+2024-01-04 15:27:52,954 INFO    MainThread:5084 [wandb_run.py:_on_init():2189] got version response upgrade_message: "wandb version 0.16.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-01-04 15:27:52,954 INFO    MainThread:5084 [wandb_init.py:init():798] starting run threads in backend
+2024-01-04 15:28:23,163 INFO    MainThread:5084 [wandb_run.py:_console_start():2159] atexit reg
+2024-01-04 15:28:23,163 INFO    MainThread:5084 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2024-01-04 15:28:23,163 INFO    MainThread:5084 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2024-01-04 15:28:23,164 INFO    MainThread:5084 [wandb_run.py:_redirect():2104] Redirects installed.
+2024-01-04 15:28:23,167 INFO    MainThread:5084 [wandb_init.py:init():839] run started, returning control to user process

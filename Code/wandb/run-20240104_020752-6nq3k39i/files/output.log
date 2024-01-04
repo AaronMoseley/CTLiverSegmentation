@@ -1,0 +1,202 @@
+
+Training on cuda
+Epoch 0:
+Train Loss: 0.8644803762435913 Validation Loss: 0.9274764060974121 dice_loss: tensor(0.9954, device='cuda:0') binary_pixel_ce: tensor(0.8596, device='cuda:0') dice_score: tensor(0.0001, device='cuda:0')
+Epoch 1:
+Train Loss: 0.8133419156074524 Validation Loss: 0.8943878412246704 dice_loss: tensor(0.9943, device='cuda:0') binary_pixel_ce: tensor(0.7945, device='cuda:0') dice_score: tensor(0.0005, device='cuda:0')
+Epoch 2:
+Train Loss: 0.7807666063308716 Validation Loss: 0.8963714241981506 dice_loss: tensor(0.9958, device='cuda:0') binary_pixel_ce: tensor(0.7970, device='cuda:0') dice_score: tensor(0.0002, device='cuda:0')
+Epoch 3:
+Train Loss: 0.7562019228935242 Validation Loss: 0.8509922027587891 dice_loss: tensor(0.9524, device='cuda:0') binary_pixel_ce: tensor(0.7495, device='cuda:0') dice_score: tensor(0.1050, device='cuda:0')
+Epoch 4:
+Train Loss: 0.7403123378753662 Validation Loss: 0.8373441100120544 dice_loss: tensor(0.9388, device='cuda:0') binary_pixel_ce: tensor(0.7359, device='cuda:0') dice_score: tensor(0.1495, device='cuda:0')
+Epoch 5:
+Train Loss: 0.726900041103363 Validation Loss: 0.8641037940979004 dice_loss: tensor(0.9807, device='cuda:0') binary_pixel_ce: tensor(0.7475, device='cuda:0') dice_score: tensor(0.0299, device='cuda:0')
+Epoch 6:
+Train Loss: 0.7189683318138123 Validation Loss: 0.8242403268814087 dice_loss: tensor(0.9255, device='cuda:0') binary_pixel_ce: tensor(0.7230, device='cuda:0') dice_score: tensor(0.1856, device='cuda:0')
+Epoch 7:
+Train Loss: 0.7138987183570862 Validation Loss: 0.8195756077766418 dice_loss: tensor(0.9187, device='cuda:0') binary_pixel_ce: tensor(0.7205, device='cuda:0') dice_score: tensor(0.1943, device='cuda:0')
+Epoch 8:
+Train Loss: 0.7111312747001648 Validation Loss: 0.8184497356414795 dice_loss: tensor(0.9173, device='cuda:0') binary_pixel_ce: tensor(0.7196, device='cuda:0') dice_score: tensor(0.1826, device='cuda:0')
+Epoch 9:
+Train Loss: 0.7090550661087036 Validation Loss: 0.8179623484611511 dice_loss: tensor(0.9164, device='cuda:0') binary_pixel_ce: tensor(0.7195, device='cuda:0') dice_score: tensor(0.1875, device='cuda:0')
+Epoch 10:
+Train Loss: 0.7306817173957825 Validation Loss: 0.89415442943573 dice_loss: tensor(0.9929, device='cuda:0') binary_pixel_ce: tensor(0.7954, device='cuda:0') dice_score: tensor(0.0059, device='cuda:0')
+Epoch 11:
+Train Loss: 0.7028568983078003 Validation Loss: 0.8746168613433838 dice_loss: tensor(0.9927, device='cuda:0') binary_pixel_ce: tensor(0.7565, device='cuda:0') dice_score: tensor(0.0058, device='cuda:0')
+Epoch 12:
+Train Loss: 0.6897407174110413 Validation Loss: 0.8668826818466187 dice_loss: tensor(0.9621, device='cuda:0') binary_pixel_ce: tensor(0.7716, device='cuda:0') dice_score: tensor(0.0395, device='cuda:0')
+Epoch 13:
+Train Loss: 0.679045557975769 Validation Loss: 0.8905068635940552 dice_loss: tensor(0.9688, device='cuda:0') binary_pixel_ce: tensor(0.8123, device='cuda:0') dice_score: tensor(0.0319, device='cuda:0')
+Epoch 14:
+Train Loss: 0.6724632978439331 Validation Loss: 0.7825614809989929 dice_loss: tensor(0.8622, device='cuda:0') binary_pixel_ce: tensor(0.7029, device='cuda:0') dice_score: tensor(0.2068, device='cuda:0')
+Epoch 15:
+Train Loss: 0.6682425737380981 Validation Loss: 0.7870923280715942 dice_loss: tensor(0.8690, device='cuda:0') binary_pixel_ce: tensor(0.7052, device='cuda:0') dice_score: tensor(0.1660, device='cuda:0')
+Epoch 16:
+Train Loss: 0.6635443568229675 Validation Loss: 0.7974125146865845 dice_loss: tensor(0.8859, device='cuda:0') binary_pixel_ce: tensor(0.7090, device='cuda:0') dice_score: tensor(0.1689, device='cuda:0')
+Epoch 17:
+Train Loss: 0.6615587472915649 Validation Loss: 0.7754292488098145 dice_loss: tensor(0.8507, device='cuda:0') binary_pixel_ce: tensor(0.7002, device='cuda:0') dice_score: tensor(0.2085, device='cuda:0')
+Epoch 18:
+Train Loss: 0.6597824096679688 Validation Loss: 0.778050422668457 dice_loss: tensor(0.8522, device='cuda:0') binary_pixel_ce: tensor(0.7039, device='cuda:0') dice_score: tensor(0.1898, device='cuda:0')
+Epoch 19:
+Train Loss: 0.6587363481521606 Validation Loss: 0.7729795575141907 dice_loss: tensor(0.8464, device='cuda:0') binary_pixel_ce: tensor(0.6995, device='cuda:0') dice_score: tensor(0.2066, device='cuda:0')
+Epoch 20:
+Train Loss: 0.6616389155387878 Validation Loss: 0.8252233266830444 dice_loss: tensor(0.9383, device='cuda:0') binary_pixel_ce: tensor(0.7122, device='cuda:0') dice_score: tensor(0.0971, device='cuda:0')
+Epoch 21:
+Train Loss: 0.6575093269348145 Validation Loss: 0.7677242755889893 dice_loss: tensor(0.8331, device='cuda:0') binary_pixel_ce: tensor(0.7024, device='cuda:0') dice_score: tensor(0.2029, device='cuda:0')
+Epoch 22:
+Train Loss: 0.6475982069969177 Validation Loss: 0.7642230987548828 dice_loss: tensor(0.8317, device='cuda:0') binary_pixel_ce: tensor(0.6967, device='cuda:0') dice_score: tensor(0.2032, device='cuda:0')
+Epoch 23:
+Train Loss: 0.6447609066963196 Validation Loss: 0.793025016784668 dice_loss: tensor(0.8856, device='cuda:0') binary_pixel_ce: tensor(0.7004, device='cuda:0') dice_score: tensor(0.1449, device='cuda:0')
+Epoch 24:
+Train Loss: 0.6409844756126404 Validation Loss: 0.8371593952178955 dice_loss: tensor(0.9373, device='cuda:0') binary_pixel_ce: tensor(0.7370, device='cuda:0') dice_score: tensor(0.0641, device='cuda:0')
+Epoch 25:
+Train Loss: 0.6386276483535767 Validation Loss: 0.7596291303634644 dice_loss: tensor(0.8198, device='cuda:0') binary_pixel_ce: tensor(0.6995, device='cuda:0') dice_score: tensor(0.2019, device='cuda:0')
+Epoch 26:
+Train Loss: 0.6369571089744568 Validation Loss: 0.7588938474655151 dice_loss: tensor(0.8224, device='cuda:0') binary_pixel_ce: tensor(0.6954, device='cuda:0') dice_score: tensor(0.2060, device='cuda:0')
+Epoch 27:
+Train Loss: 0.636558473110199 Validation Loss: 0.7578068971633911 dice_loss: tensor(0.8205, device='cuda:0') binary_pixel_ce: tensor(0.6951, device='cuda:0') dice_score: tensor(0.2025, device='cuda:0')
+Epoch 28:
+Train Loss: 0.6338337063789368 Validation Loss: 0.7546329498291016 dice_loss: tensor(0.8144, device='cuda:0') binary_pixel_ce: tensor(0.6949, device='cuda:0') dice_score: tensor(0.2116, device='cuda:0')
+Epoch 29:
+Train Loss: 0.6335299015045166 Validation Loss: 0.7530584335327148 dice_loss: tensor(0.8113, device='cuda:0') binary_pixel_ce: tensor(0.6949, device='cuda:0') dice_score: tensor(0.2135, device='cuda:0')
+Epoch 30:
+Train Loss: 0.6346599459648132 Validation Loss: 0.7827821969985962 dice_loss: tensor(0.8646, device='cuda:0') binary_pixel_ce: tensor(0.7010, device='cuda:0') dice_score: tensor(0.1504, device='cuda:0')
+Epoch 31:
+Train Loss: 0.6323811411857605 Validation Loss: 0.7559912204742432 dice_loss: tensor(0.8171, device='cuda:0') binary_pixel_ce: tensor(0.6949, device='cuda:0') dice_score: tensor(0.2021, device='cuda:0')
+Epoch 32:
+Train Loss: 0.6296648383140564 Validation Loss: 0.8314669132232666 dice_loss: tensor(0.9620, device='cuda:0') binary_pixel_ce: tensor(0.7009, device='cuda:0') dice_score: tensor(0.0402, device='cuda:0')
+Epoch 33:
+Train Loss: 0.6274626851081848 Validation Loss: 0.7604891061782837 dice_loss: tensor(0.8221, device='cuda:0') binary_pixel_ce: tensor(0.6989, device='cuda:0') dice_score: tensor(0.1927, device='cuda:0')
+Epoch 34:
+Train Loss: 0.626933753490448 Validation Loss: 0.7623690366744995 dice_loss: tensor(0.8271, device='cuda:0') binary_pixel_ce: tensor(0.6976, device='cuda:0') dice_score: tensor(0.1827, device='cuda:0')
+Epoch 35:
+Train Loss: 0.6247512698173523 Validation Loss: 0.7465634942054749 dice_loss: tensor(0.7990, device='cuda:0') binary_pixel_ce: tensor(0.6941, device='cuda:0') dice_score: tensor(0.2163, device='cuda:0')
+Epoch 36:
+Train Loss: 0.6230885982513428 Validation Loss: 0.7487006187438965 dice_loss: tensor(0.8025, device='cuda:0') binary_pixel_ce: tensor(0.6949, device='cuda:0') dice_score: tensor(0.2125, device='cuda:0')
+Epoch 37:
+Train Loss: 0.6209959387779236 Validation Loss: 0.7427599430084229 dice_loss: tensor(0.7912, device='cuda:0') binary_pixel_ce: tensor(0.6943, device='cuda:0') dice_score: tensor(0.2205, device='cuda:0')
+Epoch 38:
+Train Loss: 0.6218489408493042 Validation Loss: 0.7471386790275574 dice_loss: tensor(0.7986, device='cuda:0') binary_pixel_ce: tensor(0.6957, device='cuda:0') dice_score: tensor(0.2123, device='cuda:0')
+Epoch 39:
+Train Loss: 0.6211645603179932 Validation Loss: 0.7415540814399719 dice_loss: tensor(0.7897, device='cuda:0') binary_pixel_ce: tensor(0.6934, device='cuda:0') dice_score: tensor(0.2269, device='cuda:0')
+Epoch 40:
+Train Loss: 0.6231608390808105 Validation Loss: 0.8600125312805176 dice_loss: tensor(0.9995, device='cuda:0') binary_pixel_ce: tensor(0.7205, device='cuda:0') dice_score: tensor(0.0003, device='cuda:0')
+Epoch 41:
+Train Loss: 0.6522665023803711 Validation Loss: 0.9062786102294922 dice_loss: tensor(0.9742, device='cuda:0') binary_pixel_ce: tensor(0.8384, device='cuda:0') dice_score: tensor(0.0255, device='cuda:0')
+Epoch 42:
+Train Loss: 0.6307121515274048 Validation Loss: 0.8245015740394592 dice_loss: tensor(0.9124, device='cuda:0') binary_pixel_ce: tensor(0.7366, device='cuda:0') dice_score: tensor(0.1149, device='cuda:0')
+Epoch 43:
+Train Loss: 0.624006450176239 Validation Loss: 0.7480900287628174 dice_loss: tensor(0.8033, device='cuda:0') binary_pixel_ce: tensor(0.6929, device='cuda:0') dice_score: tensor(0.3495, device='cuda:0')
+Epoch 44:
+Train Loss: 0.6209165453910828 Validation Loss: 0.7436376214027405 dice_loss: tensor(0.7948, device='cuda:0') binary_pixel_ce: tensor(0.6924, device='cuda:0') dice_score: tensor(0.8294, device='cuda:0')
+Epoch 45:
+Train Loss: 0.6178041696548462 Validation Loss: 0.7416327595710754 dice_loss: tensor(0.7901, device='cuda:0') binary_pixel_ce: tensor(0.6932, device='cuda:0') dice_score: tensor(0.3034, device='cuda:0')
+Epoch 46:
+Train Loss: 0.6172561049461365 Validation Loss: 0.7385343909263611 dice_loss: tensor(0.7832, device='cuda:0') binary_pixel_ce: tensor(0.6939, device='cuda:0') dice_score: tensor(0.3520, device='cuda:0')
+Epoch 47:
+Train Loss: 0.6156857013702393 Validation Loss: 0.7295894026756287 dice_loss: tensor(0.7669, device='cuda:0') binary_pixel_ce: tensor(0.6923, device='cuda:0') dice_score: tensor(0.8098, device='cuda:0')
+Epoch 48:
+Train Loss: 0.6147444248199463 Validation Loss: 0.7299278974533081 dice_loss: tensor(0.7676, device='cuda:0') binary_pixel_ce: tensor(0.6923, device='cuda:0') dice_score: tensor(0.8238, device='cuda:0')
+Epoch 49:
+Train Loss: 0.6152396202087402 Validation Loss: 0.7291568517684937 dice_loss: tensor(0.7660, device='cuda:0') binary_pixel_ce: tensor(0.6923, device='cuda:0') dice_score: tensor(0.7949, device='cuda:0')
+Epoch 50:
+Train Loss: 0.614654541015625 Validation Loss: 0.8062648773193359 dice_loss: tensor(0.9193, device='cuda:0') binary_pixel_ce: tensor(0.6932, device='cuda:0') dice_score: tensor(0.7690, device='cuda:0')
+Epoch 51:
+Train Loss: 0.6150709986686707 Validation Loss: 0.7853906154632568 dice_loss: tensor(0.8623, device='cuda:0') binary_pixel_ce: tensor(0.7084, device='cuda:0') dice_score: tensor(0.1397, device='cuda:0')
+Epoch 52:
+Train Loss: 0.6140738725662231 Validation Loss: 0.7552236914634705 dice_loss: tensor(0.8171, device='cuda:0') binary_pixel_ce: tensor(0.6934, device='cuda:0') dice_score: tensor(0.5663, device='cuda:0')
+Epoch 53:
+Train Loss: 0.6081432104110718 Validation Loss: 0.745238184928894 dice_loss: tensor(0.7974, device='cuda:0') binary_pixel_ce: tensor(0.6931, device='cuda:0') dice_score: tensor(0.7263, device='cuda:0')
+Epoch 54:
+Train Loss: 0.6066387295722961 Validation Loss: 0.7070733308792114 dice_loss: tensor(0.7221, device='cuda:0') binary_pixel_ce: tensor(0.6921, device='cuda:0') dice_score: tensor(0.9534, device='cuda:0')
+Epoch 55:
+Train Loss: 0.6086203455924988 Validation Loss: 0.7998799085617065 dice_loss: tensor(0.9065, device='cuda:0') binary_pixel_ce: tensor(0.6933, device='cuda:0') dice_score: tensor(0.6098, device='cuda:0')
+Epoch 56:
+Train Loss: 0.604182243347168 Validation Loss: 0.7017542719841003 dice_loss: tensor(0.7113, device='cuda:0') binary_pixel_ce: tensor(0.6922, device='cuda:0') dice_score: tensor(0.8938, device='cuda:0')
+Epoch 57:
+Train Loss: 0.601325273513794 Validation Loss: 0.6962432861328125 dice_loss: tensor(0.7004, device='cuda:0') binary_pixel_ce: tensor(0.6921, device='cuda:0') dice_score: tensor(0.8221, device='cuda:0')
+Epoch 58:
+Train Loss: 0.5997113585472107 Validation Loss: 0.6983373761177063 dice_loss: tensor(0.7046, device='cuda:0') binary_pixel_ce: tensor(0.6921, device='cuda:0') dice_score: tensor(0.7598, device='cuda:0')
+Epoch 59:
+Train Loss: 0.599035382270813 Validation Loss: 0.6930811405181885 dice_loss: tensor(0.6941, device='cuda:0') binary_pixel_ce: tensor(0.6921, device='cuda:0') dice_score: tensor(0.8428, device='cuda:0')
+Epoch 60:
+Train Loss: 0.6006978750228882 Validation Loss: 0.7794351577758789 dice_loss: tensor(0.8657, device='cuda:0') binary_pixel_ce: tensor(0.6932, device='cuda:0') dice_score: tensor(0.7510, device='cuda:0')
+Epoch 61:
+Train Loss: 0.5901511907577515 Validation Loss: 0.7526766657829285 dice_loss: tensor(0.8074, device='cuda:0') binary_pixel_ce: tensor(0.6979, device='cuda:0') dice_score: tensor(0.2031, device='cuda:0')
+Epoch 62:
+Train Loss: 0.5766004323959351 Validation Loss: 0.7823718786239624 dice_loss: tensor(0.8616, device='cuda:0') binary_pixel_ce: tensor(0.7031, device='cuda:0') dice_score: tensor(0.1464, device='cuda:0')
+Epoch 63:
+Train Loss: 0.5321704745292664 Validation Loss: 0.65320885181427 dice_loss: tensor(0.6132, device='cuda:0') binary_pixel_ce: tensor(0.6932, device='cuda:0') dice_score: tensor(0.4619, device='cuda:0')
+Epoch 64:
+Train Loss: 0.4586558938026428 Validation Loss: 0.49366629123687744 dice_loss: tensor(0.2942, device='cuda:0') binary_pixel_ce: tensor(0.6931, device='cuda:0') dice_score: tensor(0.7510, device='cuda:0')
+Epoch 65:
+Train Loss: 0.4549899995326996 Validation Loss: 0.8924280405044556 dice_loss: tensor(0.9972, device='cuda:0') binary_pixel_ce: tensor(0.7877, device='cuda:0') dice_score: tensor(0.0028, device='cuda:0')
+Epoch 66:
+Train Loss: 0.40469709038734436 Validation Loss: 0.4788530468940735 dice_loss: tensor(0.2646, device='cuda:0') binary_pixel_ce: tensor(0.6931, device='cuda:0') dice_score: tensor(0.7510, device='cuda:0')
+Epoch 67:
+Train Loss: 0.39193814992904663 Validation Loss: 0.38672518730163574 dice_loss: tensor(0.0814, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9495, device='cuda:0')
+Epoch 68:
+Train Loss: 0.387121319770813 Validation Loss: 0.3736558258533478 dice_loss: tensor(0.0553, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9575, device='cuda:0')
+Epoch 69:
+Train Loss: 0.3855183720588684 Validation Loss: 0.3738822042942047 dice_loss: tensor(0.0558, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9577, device='cuda:0')
+Epoch 70:
+Train Loss: 0.394601970911026 Validation Loss: 0.47853004932403564 dice_loss: tensor(0.2639, device='cuda:0') binary_pixel_ce: tensor(0.6931, device='cuda:0') dice_score: tensor(0.7510, device='cuda:0')
+Epoch 71:
+Train Loss: 0.38048818707466125 Validation Loss: 0.8196701407432556 dice_loss: tensor(0.9127, device='cuda:0') binary_pixel_ce: tensor(0.7267, device='cuda:0') dice_score: tensor(0.0873, device='cuda:0')
+Epoch 72:
+Train Loss: 0.38196495175361633 Validation Loss: 0.5157219767570496 dice_loss: tensor(0.3383, device='cuda:0') binary_pixel_ce: tensor(0.6932, device='cuda:0') dice_score: tensor(0.6990, device='cuda:0')
+Epoch 73:
+Train Loss: 0.37148517370224 Validation Loss: 0.3959164023399353 dice_loss: tensor(0.0997, device='cuda:0') binary_pixel_ce: tensor(0.6921, device='cuda:0') dice_score: tensor(0.9358, device='cuda:0')
+Epoch 74:
+Train Loss: 0.36673906445503235 Validation Loss: 0.6251063942909241 dice_loss: tensor(0.5549, device='cuda:0') binary_pixel_ce: tensor(0.6953, device='cuda:0') dice_score: tensor(0.4510, device='cuda:0')
+Epoch 75:
+Train Loss: 0.37677302956581116 Validation Loss: 0.4720838963985443 dice_loss: tensor(0.2510, device='cuda:0') binary_pixel_ce: tensor(0.6931, device='cuda:0') dice_score: tensor(0.7510, device='cuda:0')
+Epoch 76:
+Train Loss: 0.36443203687667847 Validation Loss: 0.37528565526008606 dice_loss: tensor(0.0586, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9431, device='cuda:0')
+Epoch 77:
+Train Loss: 0.36274805665016174 Validation Loss: 0.37210240960121155 dice_loss: tensor(0.0522, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9498, device='cuda:0')
+Epoch 78:
+Train Loss: 0.36170995235443115 Validation Loss: 0.37220513820648193 dice_loss: tensor(0.0524, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9495, device='cuda:0')
+Epoch 79:
+Train Loss: 0.36144331097602844 Validation Loss: 0.37237548828125 dice_loss: tensor(0.0528, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9495, device='cuda:0')
+Epoch 80:
+Train Loss: 0.3623681962490082 Validation Loss: 0.6369948387145996 dice_loss: tensor(0.5787, device='cuda:0') binary_pixel_ce: tensor(0.6952, device='cuda:0') dice_score: tensor(0.4311, device='cuda:0')
+Epoch 81:
+Train Loss: 0.363199919462204 Validation Loss: 0.5173032879829407 dice_loss: tensor(0.3413, device='cuda:0') binary_pixel_ce: tensor(0.6933, device='cuda:0') dice_score: tensor(0.6660, device='cuda:0')
+Epoch 82:
+Train Loss: 0.35928401350975037 Validation Loss: 0.381110817193985 dice_loss: tensor(0.0702, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9399, device='cuda:0')
+Epoch 83:
+Train Loss: 0.36054790019989014 Validation Loss: 0.4306144714355469 dice_loss: tensor(0.1687, device='cuda:0') binary_pixel_ce: tensor(0.6925, device='cuda:0') dice_score: tensor(0.8403, device='cuda:0')
+Epoch 84:
+Train Loss: 0.35927098989486694 Validation Loss: 0.3929462730884552 dice_loss: tensor(0.0937, device='cuda:0') binary_pixel_ce: tensor(0.6922, device='cuda:0') dice_score: tensor(0.9103, device='cuda:0')
+Epoch 85:
+Train Loss: 0.3586311936378479 Validation Loss: 0.3716675639152527 dice_loss: tensor(0.0514, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9497, device='cuda:0')
+Epoch 86:
+Train Loss: 0.35663315653800964 Validation Loss: 0.3742230534553528 dice_loss: tensor(0.0564, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9444, device='cuda:0')
+Epoch 87:
+Train Loss: 0.3561760485172272 Validation Loss: 0.3730740547180176 dice_loss: tensor(0.0542, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9500, device='cuda:0')
+Epoch 88:
+Train Loss: 0.3556796610355377 Validation Loss: 0.3713058829307556 dice_loss: tensor(0.0506, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9526, device='cuda:0')
+Epoch 89:
+Train Loss: 0.35560110211372375 Validation Loss: 0.3705942928791046 dice_loss: tensor(0.0492, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9527, device='cuda:0')
+Epoch 90:
+Train Loss: 0.35902348160743713 Validation Loss: 0.847282886505127 dice_loss: tensor(0.9978, device='cuda:0') binary_pixel_ce: tensor(0.6968, device='cuda:0') dice_score: tensor(0.0031, device='cuda:0')
+Epoch 91:
+Train Loss: 0.3992098569869995 Validation Loss: 0.4742620885372162 dice_loss: tensor(0.2554, device='cuda:0') binary_pixel_ce: tensor(0.6931, device='cuda:0') dice_score: tensor(0.7510, device='cuda:0')
+Epoch 92:
+Train Loss: 0.3921598494052887 Validation Loss: 0.4102981686592102 dice_loss: tensor(0.1284, device='cuda:0') binary_pixel_ce: tensor(0.6922, device='cuda:0') dice_score: tensor(0.8818, device='cuda:0')
+Epoch 93:
+Train Loss: 0.3750394880771637 Validation Loss: 0.592605471611023 dice_loss: tensor(0.4921, device='cuda:0') binary_pixel_ce: tensor(0.6931, device='cuda:0') dice_score: tensor(0.6121, device='cuda:0')
+Epoch 94:
+Train Loss: 0.363591730594635 Validation Loss: 0.37402036786079407 dice_loss: tensor(0.0560, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9482, device='cuda:0')
+Epoch 95:
+Train Loss: 0.3616475462913513 Validation Loss: 0.3826245963573456 dice_loss: tensor(0.0732, device='cuda:0') binary_pixel_ce: tensor(0.6921, device='cuda:0') dice_score: tensor(0.9300, device='cuda:0')
+Epoch 96:
+Train Loss: 0.3599102199077606 Validation Loss: 0.3880983293056488 dice_loss: tensor(0.0840, device='cuda:0') binary_pixel_ce: tensor(0.6922, device='cuda:0') dice_score: tensor(0.9214, device='cuda:0')
+Epoch 97:
+Train Loss: 0.3587051331996918 Validation Loss: 0.3757278621196747 dice_loss: tensor(0.0595, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9464, device='cuda:0')
+Epoch 98:
+Train Loss: 0.3581066429615021 Validation Loss: 0.3738076686859131 dice_loss: tensor(0.0556, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9454, device='cuda:0')
+Epoch 99:
+Train Loss: 0.3580297529697418 Validation Loss: 0.3740737736225128 dice_loss: tensor(0.0562, device='cuda:0') binary_pixel_ce: tensor(0.6920, device='cuda:0') dice_score: tensor(0.9464, device='cuda:0')
