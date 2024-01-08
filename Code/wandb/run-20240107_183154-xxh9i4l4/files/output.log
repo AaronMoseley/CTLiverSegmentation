@@ -1,0 +1,17 @@
+
+Training on cuda
+Epoch 0:
+Train Loss: 0.7909976840019226 Validation Loss: 0.8477638363838196 dice_loss: tensor(0.8478, device='cuda:0') dice_score: tensor(0.1585, device='cuda:0')
+Epoch 1:
+Train Loss: 0.65086829662323 Validation Loss: 0.9824843406677246 dice_loss: tensor(0.9825, device='cuda:0') dice_score: tensor(0.0089, device='cuda:0')
+Epoch 2:
+Train Loss: 0.5931892991065979 Validation Loss: 0.9970567226409912 dice_loss: tensor(0.9971, device='cuda:0') dice_score: tensor(0.0007, device='cuda:0')
+Epoch 3:
+Train Loss: 0.5708379149436951 Validation Loss: 0.9776163101196289 dice_loss: tensor(0.9776, device='cuda:0') dice_score: tensor(0.0090, device='cuda:0')
+Epoch 4:
+Train Loss: 0.5559099316596985 Validation Loss: 0.5882943272590637 dice_loss: tensor(0.5883, device='cuda:0') dice_score: tensor(0.4193, device='cuda:0')
+Epoch 5:
+Train Loss: 0.5444508194923401 Validation Loss: 0.5782020688056946 dice_loss: tensor(0.5782, device='cuda:0') dice_score: tensor(0.4884, device='cuda:0')
+Epoch 6:
+Train Loss: 0.5381448864936829 Validation Loss: 0.5725980997085571 dice_loss: tensor(0.5726, device='cuda:0') dice_score: tensor(0.6756, device='cuda:0')
+Epoch 7:

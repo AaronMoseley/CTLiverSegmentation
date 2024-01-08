@@ -1,0 +1,43 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-01-06T02:55:40.736564",
+    "startedAt": "2024-01-06T02:55:39.668510",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "host": "magpie",
+    "username": "ajmo276",
+    "executable": "c:\\Users\\ajmo276\\anaconda3\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2527.0,
+        "min": 0.0,
+        "max": 2794.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2527.0,
+            "min": 0.0,
+            "max": 2794.0
+        }
+    ],
+    "disk": {
+        "total": 297.5901527404785,
+        "used": 214.06080627441406
+    },
+    "gpu": "NVIDIA GeForce GTX 1070",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1070",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 23.997638702392578
+    }
+}

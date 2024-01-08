@@ -1,0 +1,202 @@
+
+Training on cuda
+Epoch 0:
+Train Loss: 0.5511438846588135 Validation Loss: 0.6137605309486389 dice_score: tensor(0.0258, device='cuda:0') dice_loss: tensor(0.9835, device='cuda:0') accuracy: 0.29333333333333333 FocalLoss: tensor(0.0592, device='cuda:0')
+Epoch 1:
+Train Loss: 0.5239352583885193 Validation Loss: 0.6009987592697144 dice_score: tensor(0.0573, device='cuda:0') dice_loss: tensor(0.9749, device='cuda:0') accuracy: 0.6933333333333334 FocalLoss: tensor(0.0402, device='cuda:0')
+Epoch 2:
+Train Loss: 0.49980461597442627 Validation Loss: 0.6133103370666504 dice_score: tensor(0.0337, device='cuda:0') dice_loss: tensor(0.9785, device='cuda:0') accuracy: 0.39666666666666667 FocalLoss: tensor(0.0655, device='cuda:0')
+Epoch 3:
+Train Loss: 0.484144389629364 Validation Loss: 1.210805892944336 dice_score: tensor(0.0292, device='cuda:0') dice_loss: tensor(0.9777, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.5605, device='cuda:0')
+Epoch 4:
+Train Loss: 0.46723711490631104 Validation Loss: 0.6587688326835632 dice_score: tensor(0.0772, device='cuda:0') dice_loss: tensor(0.9559, device='cuda:0') accuracy: 0.25 FocalLoss: tensor(0.2131, device='cuda:0')
+Epoch 5:
+Train Loss: 0.45884132385253906 Validation Loss: 0.7170103192329407 dice_score: tensor(0.0336, device='cuda:0') dice_loss: tensor(0.9733, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.3326, device='cuda:0')
+Epoch 6:
+Train Loss: 0.4486040472984314 Validation Loss: 0.6483864188194275 dice_score: tensor(0.1564, device='cuda:0') dice_loss: tensor(0.9299, device='cuda:0') accuracy: 0.44333333333333336 FocalLoss: tensor(0.2261, device='cuda:0')
+Epoch 7:
+Train Loss: 0.44134047627449036 Validation Loss: 0.5890262126922607 dice_score: tensor(0.1718, device='cuda:0') dice_loss: tensor(0.9256, device='cuda:0') accuracy: 0.69 FocalLoss: tensor(0.0841, device='cuda:0')
+Epoch 8:
+Train Loss: 0.43683862686157227 Validation Loss: 0.5905231833457947 dice_score: tensor(0.1723, device='cuda:0') dice_loss: tensor(0.9234, device='cuda:0') accuracy: 0.7933333333333333 FocalLoss: tensor(0.0912, device='cuda:0')
+Epoch 9:
+Train Loss: 0.4356580674648285 Validation Loss: 0.5895116329193115 dice_score: tensor(0.1703, device='cuda:0') dice_loss: tensor(0.9230, device='cuda:0') accuracy: 0.7233333333333334 FocalLoss: tensor(0.0893, device='cuda:0')
+Epoch 10:
+Train Loss: 0.43666139245033264 Validation Loss: 0.674583375453949 dice_score: tensor(0.1295, device='cuda:0') dice_loss: tensor(0.9199, device='cuda:0') accuracy: 0.25 FocalLoss: tensor(0.3066, device='cuda:0')
+Epoch 11:
+Train Loss: 0.42162978649139404 Validation Loss: 1.1340651512145996 dice_score: tensor(0.0495, device='cuda:0') dice_loss: tensor(0.9666, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.3853, device='cuda:0')
+Epoch 12:
+Train Loss: 0.4150606691837311 Validation Loss: 0.7014768719673157 dice_score: tensor(8.3920e-05, device='cuda:0') dice_loss: tensor(0.9997, device='cuda:0') accuracy: 0.25 FocalLoss: tensor(0.2541, device='cuda:0')
+Epoch 13:
+Train Loss: 0.4030115306377411 Validation Loss: 0.577903687953949 dice_score: tensor(0.1361, device='cuda:0') dice_loss: tensor(0.8976, device='cuda:0') accuracy: 0.39666666666666667 FocalLoss: tensor(0.0984, device='cuda:0')
+Epoch 14:
+Train Loss: 0.39396756887435913 Validation Loss: 0.6710607409477234 dice_score: tensor(0.0247, device='cuda:0') dice_loss: tensor(0.9780, device='cuda:0') accuracy: 0.25 FocalLoss: tensor(0.2107, device='cuda:0')
+Epoch 15:
+Train Loss: 0.3863941431045532 Validation Loss: 0.6504771709442139 dice_score: tensor(0.1398, device='cuda:0') dice_loss: tensor(0.8858, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.2975, device='cuda:0')
+Epoch 16:
+Train Loss: 0.38461485505104065 Validation Loss: 0.557320237159729 dice_score: tensor(0.1457, device='cuda:0') dice_loss: tensor(0.9021, device='cuda:0') accuracy: 0.7633333333333333 FocalLoss: tensor(0.0402, device='cuda:0')
+Epoch 17:
+Train Loss: 0.38111111521720886 Validation Loss: 0.5370684266090393 dice_score: tensor(0.1926, device='cuda:0') dice_loss: tensor(0.8503, device='cuda:0') accuracy: 0.8400000000000001 FocalLoss: tensor(0.0672, device='cuda:0')
+Epoch 18:
+Train Loss: 0.3783446252346039 Validation Loss: 0.5298262238502502 dice_score: tensor(0.2024, device='cuda:0') dice_loss: tensor(0.8454, device='cuda:0') accuracy: 0.7733333333333333 FocalLoss: tensor(0.0565, device='cuda:0')
+Epoch 19:
+Train Loss: 0.3787117302417755 Validation Loss: 0.529984712600708 dice_score: tensor(0.2044, device='cuda:0') dice_loss: tensor(0.8442, device='cuda:0') accuracy: 0.7899999999999999 FocalLoss: tensor(0.0586, device='cuda:0')
+Epoch 20:
+Train Loss: 0.38161545991897583 Validation Loss: 0.5441712141036987 dice_score: tensor(0.1368, device='cuda:0') dice_loss: tensor(0.8853, device='cuda:0') accuracy: 0.7166666666666666 FocalLoss: tensor(0.0324, device='cuda:0')
+Epoch 21:
+Train Loss: 0.3827536404132843 Validation Loss: 1.260508418083191 dice_score: tensor(0.0011, device='cuda:0') dice_loss: tensor(0.9969, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.6559, device='cuda:0')
+Epoch 22:
+Train Loss: 0.37070783972740173 Validation Loss: 0.6362635493278503 dice_score: tensor(0.0236, device='cuda:0') dice_loss: tensor(0.9774, device='cuda:0') accuracy: 0.44333333333333336 FocalLoss: tensor(0.1246, device='cuda:0')
+Epoch 23:
+Train Loss: 0.3641689121723175 Validation Loss: 0.5410850048065186 dice_score: tensor(0.1519, device='cuda:0') dice_loss: tensor(0.8590, device='cuda:0') accuracy: 0.5 FocalLoss: tensor(0.0642, device='cuda:0')
+Epoch 24:
+Train Loss: 0.3601866364479065 Validation Loss: 0.5302678346633911 dice_score: tensor(0.1509, device='cuda:0') dice_loss: tensor(0.8618, device='cuda:0') accuracy: 0.8628571428571428 FocalLoss: tensor(0.0329, device='cuda:0')
+Epoch 25:
+Train Loss: 0.35627368092536926 Validation Loss: 0.9294586181640625 dice_score: tensor(0.2011, device='cuda:0') dice_loss: tensor(0.8212, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.0919, device='cuda:0')
+Epoch 26:
+Train Loss: 0.35346439480781555 Validation Loss: 0.5222907662391663 dice_score: tensor(0.2021, device='cuda:0') dice_loss: tensor(0.8168, device='cuda:0') accuracy: 0.5366666666666666 FocalLoss: tensor(0.0805, device='cuda:0')
+Epoch 27:
+Train Loss: 0.35306113958358765 Validation Loss: 0.49823594093322754 dice_score: tensor(0.2023, device='cuda:0') dice_loss: tensor(0.8151, device='cuda:0') accuracy: 0.9200000000000002 FocalLoss: tensor(0.0229, device='cuda:0')
+Epoch 28:
+Train Loss: 0.3521042764186859 Validation Loss: 0.4946577847003937 dice_score: tensor(0.2102, device='cuda:0') dice_loss: tensor(0.8098, device='cuda:0') accuracy: 0.9233333333333332 FocalLoss: tensor(0.0219, device='cuda:0')
+Epoch 29:
+Train Loss: 0.3520520031452179 Validation Loss: 0.49634915590286255 dice_score: tensor(0.2080, device='cuda:0') dice_loss: tensor(0.8109, device='cuda:0') accuracy: 0.9166666666666666 FocalLoss: tensor(0.0245, device='cuda:0')
+Epoch 30:
+Train Loss: 0.3622976541519165 Validation Loss: 0.9993168115615845 dice_score: tensor(0.0003, device='cuda:0') dice_loss: tensor(0.9995, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.9990, device='cuda:0')
+Epoch 31:
+Train Loss: 0.36057788133621216 Validation Loss: 0.6415191292762756 dice_score: tensor(0.0877, device='cuda:0') dice_loss: tensor(0.9254, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.2158, device='cuda:0')
+Epoch 32:
+Train Loss: 0.35111281275749207 Validation Loss: 0.5574446320533752 dice_score: tensor(0.1489, device='cuda:0') dice_loss: tensor(0.8564, device='cuda:0') accuracy: 0.4266666666666666 FocalLoss: tensor(0.1090, device='cuda:0')
+Epoch 33:
+Train Loss: 0.3461695611476898 Validation Loss: 0.8770002722740173 dice_score: tensor(0.2071, device='cuda:0') dice_loss: tensor(0.8064, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.9829, device='cuda:0')
+Epoch 34:
+Train Loss: 0.34402555227279663 Validation Loss: 0.5067932605743408 dice_score: tensor(0.1972, device='cuda:0') dice_loss: tensor(0.8159, device='cuda:0') accuracy: 0.6233333333333333 FocalLoss: tensor(0.0432, device='cuda:0')
+Epoch 35:
+Train Loss: 0.3436736762523651 Validation Loss: 1.0395233631134033 dice_score: tensor(0.1833, device='cuda:0') dice_loss: tensor(0.8273, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.3579, device='cuda:0')
+Epoch 36:
+Train Loss: 0.3423236906528473 Validation Loss: 0.49402791261672974 dice_score: tensor(0.2120, device='cuda:0') dice_loss: tensor(0.8005, device='cuda:0') accuracy: 0.8099999999999999 FocalLoss: tensor(0.0343, device='cuda:0')
+Epoch 37:
+Train Loss: 0.34093400835990906 Validation Loss: 0.49802935123443604 dice_score: tensor(0.1977, device='cuda:0') dice_loss: tensor(0.8091, device='cuda:0') accuracy: 0.8966666666666668 FocalLoss: tensor(0.0314, device='cuda:0')
+Epoch 38:
+Train Loss: 0.3395525813102722 Validation Loss: 0.48279857635498047 dice_score: tensor(0.2161, device='cuda:0') dice_loss: tensor(0.7934, device='cuda:0') accuracy: 0.9066666666666666 FocalLoss: tensor(0.0169, device='cuda:0')
+Epoch 39:
+Train Loss: 0.339745432138443 Validation Loss: 0.4820183515548706 dice_score: tensor(0.2174, device='cuda:0') dice_loss: tensor(0.7925, device='cuda:0') accuracy: 0.9133333333333333 FocalLoss: tensor(0.0163, device='cuda:0')
+Epoch 40:
+Train Loss: 0.3410727083683014 Validation Loss: 0.5807672739028931 dice_score: tensor(0.0872, device='cuda:0') dice_loss: tensor(0.9182, device='cuda:0') accuracy: 0.5466666666666666 FocalLoss: tensor(0.0747, device='cuda:0')
+Epoch 41:
+Train Loss: 0.3412100374698639 Validation Loss: 0.6686192750930786 dice_score: tensor(0.0086, device='cuda:0') dice_loss: tensor(0.9908, device='cuda:0') accuracy: 0.7114285714285715 FocalLoss: tensor(0.1853, device='cuda:0')
+Epoch 42:
+Train Loss: 0.3516756594181061 Validation Loss: 0.6414439082145691 dice_score: tensor(0.0185, device='cuda:0') dice_loss: tensor(0.9827, device='cuda:0') accuracy: 0.7899999999999999 FocalLoss: tensor(0.1295, device='cuda:0')
+Epoch 43:
+Train Loss: 0.3423982560634613 Validation Loss: 0.7208402156829834 dice_score: tensor(0.0004, device='cuda:0') dice_loss: tensor(0.9995, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.3029, device='cuda:0')
+Epoch 44:
+Train Loss: 0.3401350677013397 Validation Loss: 0.6833027005195618 dice_score: tensor(0.0114, device='cuda:0') dice_loss: tensor(0.9892, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.2244, device='cuda:0')
+Epoch 45:
+Train Loss: 0.3349536657333374 Validation Loss: 0.5414542555809021 dice_score: tensor(0.1533, device='cuda:0') dice_loss: tensor(0.8572, device='cuda:0') accuracy: 0.7704761904761904 FocalLoss: tensor(0.0679, device='cuda:0')
+Epoch 46:
+Train Loss: 0.3336743116378784 Validation Loss: 0.4732818901538849 dice_score: tensor(0.2255, device='cuda:0') dice_loss: tensor(0.7812, device='cuda:0') accuracy: 0.9233333333333335 FocalLoss: tensor(0.0114, device='cuda:0')
+Epoch 47:
+Train Loss: 0.33396676182746887 Validation Loss: 0.4832368493080139 dice_score: tensor(0.2232, device='cuda:0') dice_loss: tensor(0.7829, device='cuda:0') accuracy: 0.7966666666666666 FocalLoss: tensor(0.0338, device='cuda:0')
+Epoch 48:
+Train Loss: 0.33327171206474304 Validation Loss: 0.47800612449645996 dice_score: tensor(0.2271, device='cuda:0') dice_loss: tensor(0.7802, device='cuda:0') accuracy: 0.8166666666666667 FocalLoss: tensor(0.0247, device='cuda:0')
+Epoch 49:
+Train Loss: 0.3324683606624603 Validation Loss: 0.47561636567115784 dice_score: tensor(0.2242, device='cuda:0') dice_loss: tensor(0.7820, device='cuda:0') accuracy: 0.8933333333333333 FocalLoss: tensor(0.0161, device='cuda:0')
+Epoch 50:
+Train Loss: 0.33609095215797424 Validation Loss: 0.5114715695381165 dice_score: tensor(0.1824, device='cuda:0') dice_loss: tensor(0.8200, device='cuda:0') accuracy: 0.82 FocalLoss: tensor(0.0487, device='cuda:0')
+Epoch 51:
+Train Loss: 0.3358589708805084 Validation Loss: 0.7365697622299194 dice_score: tensor(0.0003, device='cuda:0') dice_loss: tensor(0.9995, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.3422, device='cuda:0')
+Epoch 52:
+Train Loss: 0.3329063057899475 Validation Loss: 0.7937783002853394 dice_score: tensor(0.1763, device='cuda:0') dice_loss: tensor(0.8283, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.7420, device='cuda:0')
+Epoch 53:
+Train Loss: 0.3313526511192322 Validation Loss: 0.5147503018379211 dice_score: tensor(0.1738, device='cuda:0') dice_loss: tensor(0.8313, device='cuda:0') accuracy: 0.6166666666666666 FocalLoss: tensor(0.0399, device='cuda:0')
+Epoch 54:
+Train Loss: 0.3310234248638153 Validation Loss: 1.1095670461654663 dice_score: tensor(0.0004, device='cuda:0') dice_loss: tensor(0.9993, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.2749, device='cuda:0')
+Epoch 55:
+Train Loss: 0.3329309821128845 Validation Loss: 0.5255743265151978 dice_score: tensor(0.1765, device='cuda:0') dice_loss: tensor(0.8290, device='cuda:0') accuracy: 0.8866666666666667 FocalLoss: tensor(0.0704, device='cuda:0')
+Epoch 56:
+Train Loss: 0.3287512958049774 Validation Loss: 0.48938995599746704 dice_score: tensor(0.2069, device='cuda:0') dice_loss: tensor(0.7984, device='cuda:0') accuracy: 0.8766666666666667 FocalLoss: tensor(0.0259, device='cuda:0')
+Epoch 57:
+Train Loss: 0.3282746374607086 Validation Loss: 0.4785878360271454 dice_score: tensor(0.2137, device='cuda:0') dice_loss: tensor(0.7893, device='cuda:0') accuracy: 0.9166666666666666 FocalLoss: tensor(0.0125, device='cuda:0')
+Epoch 58:
+Train Loss: 0.3266116678714752 Validation Loss: 0.4702240526676178 dice_score: tensor(0.2292, device='cuda:0') dice_loss: tensor(0.7754, device='cuda:0') accuracy: 0.9333333333333333 FocalLoss: tensor(0.0124, device='cuda:0')
+Epoch 59:
+Train Loss: 0.3279345631599426 Validation Loss: 0.47154900431632996 dice_score: tensor(0.2279, device='cuda:0') dice_loss: tensor(0.7768, device='cuda:0') accuracy: 0.9133333333333333 FocalLoss: tensor(0.0137, device='cuda:0')
+Epoch 60:
+Train Loss: 0.33032748103141785 Validation Loss: 0.6547733545303345 dice_score: tensor(0.0818, device='cuda:0') dice_loss: tensor(0.9188, device='cuda:0') accuracy: 0.3 FocalLoss: tensor(0.2588, device='cuda:0')
+Epoch 61:
+Train Loss: 0.3302084505558014 Validation Loss: 0.6702631115913391 dice_score: tensor(0.0019, device='cuda:0') dice_loss: tensor(0.9980, device='cuda:0') accuracy: 0.7433333333333334 FocalLoss: tensor(0.1787, device='cuda:0')
+Epoch 62:
+Train Loss: 0.32885777950286865 Validation Loss: 1.1647024154663086 dice_score: tensor(0.1150, device='cuda:0') dice_loss: tensor(0.8863, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.5823, device='cuda:0')
+Epoch 63:
+Train Loss: 0.3270069360733032 Validation Loss: 0.5581087470054626 dice_score: tensor(0.1257, device='cuda:0') dice_loss: tensor(0.8800, device='cuda:0') accuracy: 0.8319047619047619 FocalLoss: tensor(0.0753, device='cuda:0')
+Epoch 64:
+Train Loss: 0.3257070481777191 Validation Loss: 0.5382182598114014 dice_score: tensor(0.1431, device='cuda:0') dice_loss: tensor(0.8578, device='cuda:0') accuracy: 0.78 FocalLoss: tensor(0.0588, device='cuda:0')
+Epoch 65:
+Train Loss: 0.32359740138053894 Validation Loss: 0.5881067514419556 dice_score: tensor(0.2912, device='cuda:0') dice_loss: tensor(0.9335, device='cuda:0') accuracy: 0.8166666666666668 FocalLoss: tensor(0.0700, device='cuda:0')
+Epoch 66:
+Train Loss: 0.31946250796318054 Validation Loss: 0.44610005617141724 dice_score: tensor(0.9045, device='cuda:0') dice_loss: tensor(0.7339, device='cuda:0') accuracy: 0.8866666666666667 FocalLoss: tensor(0.0144, device='cuda:0')
+Epoch 67:
+Train Loss: 0.3165104389190674 Validation Loss: 0.44930529594421387 dice_score: tensor(0.6224, device='cuda:0') dice_loss: tensor(0.7414, device='cuda:0') accuracy: 0.9233333333333332 FocalLoss: tensor(0.0111, device='cuda:0')
+Epoch 68:
+Train Loss: 0.3168136775493622 Validation Loss: 0.438982218503952 dice_score: tensor(0.8064, device='cuda:0') dice_loss: tensor(0.7237, device='cuda:0') accuracy: 0.9433333333333334 FocalLoss: tensor(0.0119, device='cuda:0')
+Epoch 69:
+Train Loss: 0.31602340936660767 Validation Loss: 0.4309269189834595 dice_score: tensor(0.8522, device='cuda:0') dice_loss: tensor(0.7118, device='cuda:0') accuracy: 0.9433333333333334 FocalLoss: tensor(0.0096, device='cuda:0')
+Epoch 70:
+Train Loss: 0.3210145831108093 Validation Loss: 0.8242940902709961 dice_score: tensor(0.3704, device='cuda:0') dice_loss: tensor(0.9793, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.5919, device='cuda:0')
+Epoch 71:
+Train Loss: 0.33661526441574097 Validation Loss: 0.8599706888198853 dice_score: tensor(0.0006, device='cuda:0') dice_loss: tensor(0.9994, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.6509, device='cuda:0')
+Epoch 72:
+Train Loss: 0.3143729865550995 Validation Loss: 0.9369748830795288 dice_score: tensor(0.4791, device='cuda:0') dice_loss: tensor(0.7682, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(1.1901, device='cuda:0')
+Epoch 73:
+Train Loss: 0.2857515215873718 Validation Loss: 0.4437205195426941 dice_score: tensor(0.9114, device='cuda:0') dice_loss: tensor(0.4472, device='cuda:0') accuracy: 0.7566666666666666 FocalLoss: tensor(0.4386, device='cuda:0')
+Epoch 74:
+Train Loss: 0.20241685211658478 Validation Loss: 0.11404722183942795 dice_score: tensor(0.8900, device='cuda:0') dice_loss: tensor(0.1733, device='cuda:0') accuracy: 0.8166666666666667 FocalLoss: tensor(0.0252, device='cuda:0')
+Epoch 75:
+Train Loss: 0.11396143585443497 Validation Loss: inf dice_score: tensor(0.0305, device='cuda:0') dice_loss: tensor(0.9693, device='cuda:0') accuracy: 0.25 FocalLoss: tensor(inf, device='cuda:0')
+Epoch 76:
+Train Loss: 0.09105728566646576 Validation Loss: 0.240432471036911 dice_score: tensor(0.7510, device='cuda:0') dice_loss: tensor(0.2671, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(0.2004, device='cuda:0')
+Epoch 77:
+Train Loss: 0.06959506124258041 Validation Loss: 0.06192498654127121 dice_score: tensor(0.9277, device='cuda:0') dice_loss: tensor(0.0895, device='cuda:0') accuracy: 0.82 FocalLoss: tensor(0.0206, device='cuda:0')
+Epoch 78:
+Train Loss: 0.06218833476305008 Validation Loss: 0.06982117891311646 dice_score: tensor(0.9082, device='cuda:0') dice_loss: tensor(0.1037, device='cuda:0') accuracy: 0.8766666666666666 FocalLoss: tensor(0.0191, device='cuda:0')
+Epoch 79:
+Train Loss: 0.05988116189837456 Validation Loss: 0.07491499930620193 dice_score: tensor(0.9044, device='cuda:0') dice_loss: tensor(0.1074, device='cuda:0') accuracy: 0.9333333333333333 FocalLoss: tensor(0.0262, device='cuda:0')
+Epoch 80:
+Train Loss: 0.1105572059750557 Validation Loss: inf dice_score: tensor(0.7510, device='cuda:0') dice_loss: tensor(0.3519, device='cuda:0') accuracy: 0.75 FocalLoss: tensor(inf, device='cuda:0')
+Epoch 81:
+Train Loss: 0.11044256389141083 Validation Loss: 0.2142961621284485 dice_score: tensor(0.7510, device='cuda:0') dice_loss: tensor(0.2584, device='cuda:0') accuracy: 0.27999999999999997 FocalLoss: tensor(0.1482, device='cuda:0')
+Epoch 82:
+Train Loss: 0.07981451600790024 Validation Loss: 0.6579113006591797 dice_score: tensor(0.1121, device='cuda:0') dice_loss: tensor(0.8878, device='cuda:0') accuracy: 0.27666666666666667 FocalLoss: tensor(0.3131, device='cuda:0')
+Epoch 83:
+Train Loss: 0.05325495824217796 Validation Loss: 0.05632711946964264 dice_score: tensor(0.9291, device='cuda:0') dice_loss: tensor(0.0742, device='cuda:0') accuracy: 0.8166666666666667 FocalLoss: tensor(0.0295, device='cuda:0')
+Epoch 84:
+Train Loss: 0.0450715497136116 Validation Loss: 0.07046081125736237 dice_score: tensor(0.9067, device='cuda:0') dice_loss: tensor(0.1036, device='cuda:0') accuracy: 0.8800000000000001 FocalLoss: tensor(0.0208, device='cuda:0')
+Epoch 85:
+Train Loss: 0.03327321261167526 Validation Loss: 0.06581143289804459 dice_score: tensor(0.9073, device='cuda:0') dice_loss: tensor(0.0960, device='cuda:0') accuracy: 0.8300000000000001 FocalLoss: tensor(0.0205, device='cuda:0')
+Epoch 86:
+Train Loss: 0.030387479811906815 Validation Loss: 0.05381420627236366 dice_score: tensor(0.9249, device='cuda:0') dice_loss: tensor(0.0803, device='cuda:0') accuracy: 0.9099999999999999 FocalLoss: tensor(0.0141, device='cuda:0')
+Epoch 87:
+Train Loss: 0.029765909537672997 Validation Loss: 0.220041424036026 dice_score: tensor(0.6826, device='cuda:0') dice_loss: tensor(0.3493, device='cuda:0') accuracy: 0.9 FocalLoss: tensor(0.0262, device='cuda:0')
+Epoch 88:
+Train Loss: 0.028545832261443138 Validation Loss: 0.0509197860956192 dice_score: tensor(0.9346, device='cuda:0') dice_loss: tensor(0.0698, device='cuda:0') accuracy: 0.9466666666666667 FocalLoss: tensor(0.0227, device='cuda:0')
+Epoch 89:
+Train Loss: 0.02723807655274868 Validation Loss: 0.05098297446966171 dice_score: tensor(0.9346, device='cuda:0') dice_loss: tensor(0.0671, device='cuda:0') accuracy: 0.95 FocalLoss: tensor(0.0269, device='cuda:0')
+Epoch 90:
+Train Loss: 0.02754579670727253 Validation Loss: 0.052866131067276 dice_score: tensor(0.9233, device='cuda:0') dice_loss: tensor(0.0785, device='cuda:0') accuracy: 0.9200000000000002 FocalLoss: tensor(0.0144, device='cuda:0')
+Epoch 91:
+Train Loss: 0.027922039851546288 Validation Loss: 0.6836809515953064 dice_score: tensor(0.1174, device='cuda:0') dice_loss: tensor(0.8825, device='cuda:0') accuracy: 0.25666666666666665 FocalLoss: tensor(0.3855, device='cuda:0')
+Epoch 92:
+Train Loss: 0.027309315279126167 Validation Loss: 0.02341085486114025 dice_score: tensor(0.9685, device='cuda:0') dice_loss: tensor(0.0329, device='cuda:0') accuracy: 0.9466666666666667 FocalLoss: tensor(0.0092, device='cuda:0')
+Epoch 93:
+Train Loss: 0.02581697329878807 Validation Loss: 0.08484084159135818 dice_score: tensor(0.8821, device='cuda:0') dice_loss: tensor(0.1191, device='cuda:0') accuracy: 0.8666666666666666 FocalLoss: tensor(0.0334, device='cuda:0')
+Epoch 94:
+Train Loss: 0.0289999321103096 Validation Loss: 0.19026291370391846 dice_score: tensor(0.7074, device='cuda:0') dice_loss: tensor(0.3034, device='cuda:0') accuracy: 0.9199999999999999 FocalLoss: tensor(0.0205, device='cuda:0')
+Epoch 95:
+Train Loss: 0.034458838403224945 Validation Loss: 0.15115435421466827 dice_score: tensor(0.8049, device='cuda:0') dice_loss: tensor(0.1971, device='cuda:0') accuracy: 0.5966666666666667 FocalLoss: tensor(0.0822, device='cuda:0')
+Epoch 96:
+Train Loss: 0.025455288589000702 Validation Loss: 0.04717595875263214 dice_score: tensor(0.9384, device='cuda:0') dice_loss: tensor(0.0651, device='cuda:0') accuracy: 0.8900000000000002 FocalLoss: tensor(0.0203, device='cuda:0')
+Epoch 97:
+Train Loss: 0.021799905225634575 Validation Loss: 0.037904586642980576 dice_score: tensor(0.9526, device='cuda:0') dice_loss: tensor(0.0522, device='cuda:0') accuracy: 0.9099999999999999 FocalLoss: tensor(0.0165, device='cuda:0')
+Epoch 98:
+Train Loss: 0.022177474573254585 Validation Loss: 0.03411141782999039 dice_score: tensor(0.9599, device='cuda:0') dice_loss: tensor(0.0444, device='cuda:0') accuracy: 0.9033333333333333 FocalLoss: tensor(0.0186, device='cuda:0')
+Epoch 99:
+Train Loss: 0.021382387727499008 Validation Loss: 0.03442378714680672 dice_score: tensor(0.9593, device='cuda:0') dice_loss: tensor(0.0448, device='cuda:0') accuracy: 0.9 FocalLoss: tensor(0.0189, device='cuda:0')

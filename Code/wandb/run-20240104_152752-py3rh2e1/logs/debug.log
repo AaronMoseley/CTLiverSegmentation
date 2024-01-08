@@ -27,3 +27,13 @@ config: {'BatchSize': 30, 'LearnRate': 0.001, 'Epochs': 100, 'StartDimension': 3
 2024-01-04 15:28:23,163 INFO    MainThread:5084 [wandb_run.py:_redirect():2079] Wrapping output streams.
 2024-01-04 15:28:23,164 INFO    MainThread:5084 [wandb_run.py:_redirect():2104] Redirects installed.
 2024-01-04 15:28:23,167 INFO    MainThread:5084 [wandb_init.py:init():839] run started, returning control to user process
+2024-01-04 18:28:35,127 INFO    MainThread:5084 [wandb_run.py:_finish():1894] finishing run amoseley018/EMBCJointTraining/py3rh2e1
+2024-01-04 18:28:35,127 INFO    MainThread:5084 [jupyter.py:save_history():445] not saving jupyter history
+2024-01-04 18:28:35,127 INFO    MainThread:5084 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-01-04 18:28:35,128 INFO    MainThread:5084 [wandb_init.py:_jupyter_teardown():452] cleaning up jupyter logic
+2024-01-04 18:28:35,128 INFO    MainThread:5084 [wandb_run.py:_atexit_cleanup():2128] got exitcode: 0
+2024-01-04 18:28:35,128 INFO    MainThread:5084 [wandb_run.py:_restore():2111] restore
+2024-01-04 18:28:35,129 INFO    MainThread:5084 [wandb_run.py:_restore():2117] restore done
+2024-01-04 18:28:39,101 INFO    MainThread:5084 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2024-01-04 18:28:39,102 INFO    MainThread:5084 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2024-01-04 18:28:39,115 INFO    MainThread:5084 [wandb_run.py:_footer_sync_info():3440] logging synced files

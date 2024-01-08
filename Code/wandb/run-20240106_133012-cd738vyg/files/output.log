@@ -1,0 +1,18 @@
+
+Training on cuda
+Epoch 0:
+Train Loss: nan Validation Loss: 0.0 dice_score: 0.0 dice_loss: 0.0 accuracy: 0.0 FocalLoss: 0.0
+Epoch 1:
+Train Loss: nan Validation Loss: 0.0 dice_score: 0.0 dice_loss: 0.0 accuracy: 0.0 FocalLoss: 0.0
+Training on cuda
+Training on cuda
+ERROR:root:Length of weights and loss functions is not equal
+ERROR:root:Length of weights and loss functions is not equal
+ERROR:root:Length of weights and loss functions is not equal
+Training on cuda
+Training on cuda
+Training on cuda
+ERROR:root:Length of weights and loss functions is not equal
+ERROR:root:Length of weights and loss functions is not equal
+Training on cuda
+Epoch 0:
